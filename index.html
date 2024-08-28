@@ -49,13 +49,13 @@
 RGB value if this pixel is the current material or the background
 material. White Pixels correspond to background material and Black
 pixels correspond to Current Material pixels with in-between colors
-are returned as 0.5 which is presently unused in the writer algorithm</p>
+are returned as 1</p>
 <dl class="field-list simple">
 <dt class="field-odd">param px<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Current Pixel of Geometry Image File (Array)</p>
 </dd>
 <dt class="field-even">returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 0.5 otherwise</p>
+<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise</p>
 </dd>
 </dl>
 </section>
@@ -97,10 +97,6 @@ to the geometry.json file including the following</p>
 <span id="geometryentrystring"></span><h2>GeometryEntryString()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntryString" title="Permalink to this heading">¶</a></h2>
 <p>Create a String for the geometry.json file entry.</p>
 </section>
-<section id="module-fdtdgeometrywriter.WriteGeometry">
-<span id="writegeometry"></span><h2>WriteGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.WriteGeometry" title="Permalink to this heading">¶</a></h2>
-<p>Write Each Geometry Entry String to geometry.json file.</p>
-</section>
 <section id="module-fdtdgeometrywriter.DisplayPreview">
 <span id="displaypreview"></span><h2>DisplayPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.DisplayPreview" title="Permalink to this heading">¶</a></h2>
 <p>Plot a Preview of the MaterialBlocks.</p>
@@ -133,7 +129,6 @@ to the geometry.json file including the following</p>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialBlock">MaterialBlock()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntryString">GeometryEntryString()</a></li>
-<li><a class="reference internal" href="#module-fdtdgeometrywriter.WriteGeometry">WriteGeometry()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.DisplayPreview">DisplayPreview()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialLayerPreview">MaterialLayerPreview()</a></li>
 </ul>
