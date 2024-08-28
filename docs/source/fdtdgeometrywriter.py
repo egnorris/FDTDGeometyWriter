@@ -2,6 +2,18 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
+def getImage(ImgPath):
+    """Retrieve Geometry Image from file.
+    Convert the image at the supplied file path to a numpy array 
+    and return to the user
+
+    Arg:
+        ImgPath: Path to Geometry Image File
+    
+    Returns:
+        geometry image as an RGBA array
+    """
+    return np.asarray(Image.open(ImgPath))
 
 def getPixelMaterial(px):
     """Retrieve the Material of the Current Pixel.
@@ -10,13 +22,13 @@ def getPixelMaterial(px):
     RGB value if this pixel is the current material or the background
     material. White Pixels correspond to background material and Black
     pixels correspond to Current Material pixels with in-between colors
-    are returned as 0.5 which is presently unused in the writer algorithm
+    are returned as 1
     
     Args:
         px: Current Pixel of Geometry Image File (Array) 
 
     Returns:
-        Material State - Either 0 for vacuum, 1 for current material, or 0.5 otherwise
+        Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise
 
     """
     R,G,B,_ = px
@@ -25,7 +37,7 @@ def getPixelMaterial(px):
     elif R == 0 and G == 0 and B == 0:
         return 1
     else:
-        return 0.5
+        return 1
 
 def midpoint(p0, p1):
   return (int((p0[0] + p1[0])/2), int((p0[1] + p1[1])/2))
@@ -74,7 +86,7 @@ def getMaterialList(image, Material, Thickness):
         List of Material Block Objects
 
     """
-    a = np.asarray(im)
+    a = image
     Y = a.shape[0]
     X = a.shape[1]
     count = 0
@@ -107,8 +119,6 @@ def getMaterialList(image, Material, Thickness):
                 count += 1
 
             if px1 == 1 and px2 == 0:
-                MatL.append(count)
-                MaterialBlock
                 EndBound = (col, row)
                 Bounds = [StartBound, EndBound]
                 temp = MaterialBlock(Boundaries = Bounds,
@@ -117,7 +127,7 @@ def getMaterialList(image, Material, Thickness):
                                         Thickness = Thickness)
                 MaterialList.append(temp)
                 count = 0
-    print(f"{nBlocks} Detected")
+    print(f"{nBlocks} Material Blocks Detected")
     return MaterialList
 
 def DisplayPreview(MaterialList, DomainSize):
@@ -151,16 +161,9 @@ def GeometryEntryString(M, stepsize, layer):
     l7 = f'"position": [{x},{y},{z}]'
     return "{" + l1 + l2 + l3 + l4 + l5 + l6 + l7 + "}"
 
-def WriteGeometry(MaterialList, StepSize, Layer):
-    """Write Each Geometry Entry String to geometry.json file.
-    """
-    f = open("geometry.json", "a")
-    for i in range(len(MaterialList)-2):
-        f.write(GeometryEntryString(MaterialList[i], StepSize, Layer) + ",")
-    f.write(GeometryEntryString(MaterialList[-1], StepSize, Layer) + ",")
 
 
-def MaterialLayerPreview(MaterialLayer, MaterialThickness, DomainSize):
+def MaterialLayerPreview(MaterialLayer, MaterialThickness, MaterialLabels, DomainSize):
     """Plot a Preview of the Material Layer Placement.
     """
     fig, ax = plt.subplots()
@@ -171,17 +174,33 @@ def MaterialLayerPreview(MaterialLayer, MaterialThickness, DomainSize):
     fig.set_figwidth(5)
     plt.ylim(0,DomainSize[1])
     plt.xlim(0,DomainSize[2])
+    coord = [[0,0], [0,DomainSize[1]], [DomainSize[2],DomainSize[1]], [DomainSize[2],0]]
+    p = Polygon(coord, facecolor = 'cyan', label="Vacuum")
+    ax.add_patch(p)
     for i in range(len(MaterialLayer)):
         coord = [[DomainSize[2]/2+DomainSize[2],MaterialLayer[i]+MaterialThickness[i]/2],
             [DomainSize[2]/2+DomainSize[2], MaterialLayer[i]-MaterialThickness[i]/2],
             [DomainSize[2]/2-DomainSize[2], MaterialLayer[i]-MaterialThickness[i]/2],
             [DomainSize[2]/2-DomainSize[2], MaterialLayer[i]+MaterialThickness[i]/2]]
         if i == 0:
-            p = Polygon(coord, facecolor = 'lightblue')
+            p = Polygon(coord, facecolor = 'orange', label=MaterialLabels[i])
         elif i == 1:
-            p = Polygon(coord, facecolor = 'gray')
-        else:
-            p = Polygon(coord, facecolor = 'gold')
+            p = Polygon(coord, facecolor = 'green', label=MaterialLabels[i])
+        elif i == 2:
+            p = Polygon(coord, facecolor = 'red', label=MaterialLabels[i])
+        elif i == 3:
+            p = Polygon(coord, facecolor = 'purple', label=MaterialLabels[i])
+        elif i == 4:
+            p = Polygon(coord, facecolor = 'brown', label=MaterialLabels[i])
+        elif i == 5:
+            p = Polygon(coord, facecolor = 'pink', label=MaterialLabels[i])
+        elif i == 6:
+            p = Polygon(coord, facecolor = 'gray', label=MaterialLabels[i])
+        elif i == 7:
+            p = Polygon(coord, facecolor = 'olive', label=MaterialLabels[i])
+        elif i == 8:
+            p = Polygon(coord, facecolor = 'blue', label=MaterialLabels[i])
         ax.add_patch(p)
+    plt.legend()
     plt.title("Material Layer Preview")
     plt.show()

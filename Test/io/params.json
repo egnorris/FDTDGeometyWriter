@@ -1,0 +1,6 @@
+{
+    "MaterialLayer":[164, 151.5],
+    "MaterialThickness":[25, 3],
+    "MaterialLabel":["Gold", "Chromium"],
+    "MaterialImagePath":["io/TestShape.png", "io/TestShape.png", "io/TestShape.png"]
+}

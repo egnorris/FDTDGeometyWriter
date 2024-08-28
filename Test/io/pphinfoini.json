@@ -1,7 +1,7 @@
 {
-	"Domain Size": [300, 600, 300],
+	"Domain Size": [500, 300, 500],
 	"Domain Decomposition": [4, 4, 4],
-	"Step Size": [2e-9, 1e-9, 2e-9],
+	"Step Size": [1e-9, 1e-9, 1e-9],
 	"PML Box": [20, 20, 20],
 	"TFSF Box": [20, 20, 20],
 	"Scattering Box": [10, 10, 10],
@@ -11,5 +11,5 @@
 	"Minimum Wavelength": 500e-09,
 	"Maximum Wavelength": 1500e-09,
 	"ANTENNA_TYPE": 1000,
-	"Center Position": [600, 300, 600]
+	"Center Position": [250, 150, 250]
 }

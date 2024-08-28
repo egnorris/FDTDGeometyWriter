@@ -11,7 +11,6 @@ Documentation for the 3D-FDTD Geometry Writer
 
 
 
-
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
