@@ -14,21 +14,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
-def getPixelColor(px):
-    """
-    Get the RGBA values for a given pixel in the geometry image
+def getPixelMaterial(px):
+    """GetPixelMaterial() retrieve the Material of the Current Pixel.
+    
+    Take in a pixel of the material image and determine based on the
+    RGB value if this pixel is the current material or the background
+    material. White Pixels correspond to background material and Black
+    pixels correspond to Current Material pixels with in-between colors
+
+    are returned as 0.5 which is presently unused in the writer algorithm
     
     Args:
-        px (array): Current Geometry Image Pixel
+        px: (Array) Current Pixel of Geometry Image File
 
     Returns:
-        R    (int): Value of Red Color Channel
-        G    (int): Value of Green Color Channel
-        B    (int): Value of Blue Color Channel
-        A  (float): Value of Alpha Channel
+        Material State - Either 0 for vacuum, 1 for current material, or 0.5 otherwise
+
     """
-    R = px[0]
-    G = px[1]
-    B = px[2]
-    A = px[3]
-    return R, G, B, A
+    R,G,B,_ = px
+    if R == 255 and G == 255 and B == 255:
+        return 0
+    elif R == 0 and G == 0 and B == 0:
+        return 1
+    else:
+        return 0.5
+
