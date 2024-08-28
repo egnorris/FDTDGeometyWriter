@@ -35,10 +35,6 @@ GeometryEntryString()
 .. automodule:: fdtdgeometrywriter.GeometryEntryString
    :members:
 
-WriteGeometry()
------------------------------------------------
-.. automodule:: fdtdgeometrywriter.WriteGeometry
-   :members:
 
 DisplayPreview()
 -----------------------------------------------
@@ -49,6 +45,7 @@ MaterialLayerPreview()
 -----------------------------------------------
 .. automodule:: fdtdgeometrywriter.MaterialLayerPreview
    :members:
+   
 Index
 ==================
 
