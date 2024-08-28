@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FDTD Geometry Writer Documentation &#8212; FDTDGeometryWriter 2024 documentation</title>
+    <title>3D-FDTD Geometry Writer &#8212; FDTDGeometryWriter 2024 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
@@ -26,7 +26,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FDTD Geometry Writer Documentation</a></li> 
+        <li class="nav-item nav-item-this"><a href="">3D-FDTD Geometry Writer</a></li> 
       </ul>
     </div>  
 
@@ -35,51 +35,85 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="fdtd-geometry-writer-documentation">
-<h1>FDTD Geometry Writer Documentation<a class="headerlink" href="#fdtd-geometry-writer-documentation" title="Permalink to this heading">¶</a></h1>
-<p>Docmentation for 3D FDTD support function for
-generating a geometry json file from an input
-png file</p>
-<span class="target" id="module-fdtdgeometrywriter"></span><p>Writes geometry.json for input image
-Description
------------</p>
-<section id="author-s">
-<h2>Author(s)<a class="headerlink" href="#author-s" title="Permalink to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>Created by Evan Norris 08/28/2024.</p></li>
-</ul>
-</section>
-<section id="members">
-<h2>Members<a class="headerlink" href="#members" title="Permalink to this heading">¶</a></h2>
-</section>
-<dl class="py function">
-<dt class="sig sig-object py" id="fdtdgeometrywriter.getPixelMaterial">
-<span class="sig-prename descclassname"><span class="pre">fdtdgeometrywriter.</span></span><span class="sig-name descname"><span class="pre">getPixelMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">px</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fdtdgeometrywriter.html#getPixelMaterial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fdtdgeometrywriter.getPixelMaterial" title="Permalink to this definition">¶</a></dt>
-<dd><p>GetPixelMaterial() retrieve the Material of the Current Pixel.</p>
-<p>Take in a pixel of the material image and determine based on the
-RGB value if this pixel is the current material or the background
-material. White Pixels correspond to background material and Black
-pixels correspond to Current Material pixels with in-between colors</p>
-<p>are returned as 0.5 which is presently unused in the writer algorithm</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>px</strong> -- (Array) Current Pixel of Geometry Image File</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 0.5 otherwise</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="d-fdtd-geometry-writer">
+<h1>3D-FDTD Geometry Writer<a class="headerlink" href="#d-fdtd-geometry-writer" title="Permalink to this heading">¶</a></h1>
+<section id="documentation-for-the-3d-fdtd-geometry-writer">
+<h2>Documentation for the 3D-FDTD Geometry Writer<a class="headerlink" href="#documentation-for-the-3d-fdtd-geometry-writer" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<section id="module-fdtdgeometrywriter.getPixelMaterial">
+<span id="getpixelmaterial"></span><h2>getPixelMaterial()<a class="headerlink" href="#module-fdtdgeometrywriter.getPixelMaterial" title="Permalink to this heading">¶</a></h2>
+<p>Retrieve the Material of the Current Pixel.</p>
+<p>Take in a pixel of the material image and determine based on the
+RGB value if this pixel is the current material or the background
+material. White Pixels correspond to background material and Black
+pixels correspond to Current Material pixels with in-between colors
+are returned as 0.5 which is presently unused in the writer algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">param px<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current Pixel of Geometry Image File (Array)</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 0.5 otherwise</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.getMaterialList">
+<span id="getmateriallist"></span><h2>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Permalink to this heading">¶</a></h2>
+<p>Create a List of Current Material Geometry Information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param image<span class="colon">:</span></dt>
+<dd class="field-odd"><p>material layer image</p>
+</dd>
+<dt class="field-even">param Material<span class="colon">:</span></dt>
+<dd class="field-even"><p>material layer name</p>
+</dd>
+<dt class="field-odd">param Thickness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>thickness of curren material layer</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of Material Block Objects</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.MaterialBlock">
+<span id="materialblock"></span><h2>MaterialBlock()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialBlock" title="Permalink to this heading">¶</a></h2>
+<p>Class to Hold Material Block Data.</p>
+<p>A material block refers to an individual entry to the geometry.json
+file this class contains all of the relevant information for an entry
+to the geometry.json file including the following</p>
+<blockquote>
+<div><p>Position  -&gt; Midpoint of the material block, determined from Boundaries</p>
+<p>Length    -&gt; How long is the Material in the Current Layer, Always 1</p>
+<p>Width     -&gt; Number of Pixels in the material block</p>
+<p>Thickness -&gt; How thick the material layer is along the Propogation Axis</p>
+<p>Material  -&gt; Material Name for the material layer</p>
+<p>Shape     -&gt; Always &quot;Rectangle&quot;</p>
+<p>Radius    -&gt; How Rounded are the Corners, Always 1</p>
+</div></blockquote>
+</section>
+<section id="module-fdtdgeometrywriter.GeometryEntryString">
+<span id="geometryentrystring"></span><h2>GeometryEntryString()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntryString" title="Permalink to this heading">¶</a></h2>
+<p>Create a String for the geometry.json file entry.</p>
+</section>
+<section id="module-fdtdgeometrywriter.WriteGeometry">
+<span id="writegeometry"></span><h2>WriteGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.WriteGeometry" title="Permalink to this heading">¶</a></h2>
+<p>Write Each Geometry Entry String to geometry.json file.</p>
+</section>
+<section id="module-fdtdgeometrywriter.DisplayPreview">
+<span id="displaypreview"></span><h2>DisplayPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.DisplayPreview" title="Permalink to this heading">¶</a></h2>
+<p>Plot a Preview of the MaterialBlocks.</p>
+</section>
+<section id="module-fdtdgeometrywriter.MaterialLayerPreview">
+<span id="materiallayerpreview"></span><h2>MaterialLayerPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialLayerPreview" title="Permalink to this heading">¶</a></h2>
+<p>Plot a Preview of the Material Layer Placement.</p>
+</section>
+</section>
+<section id="index">
+<h1>Index<a class="headerlink" href="#index" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </section>
 
@@ -93,13 +127,18 @@ pixels correspond to Current Material pixels with in-between colors</p>
   <div>
     <h3><a href="#">Table of Contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">FDTD Geometry Writer Documentation</a><ul>
-<li><a class="reference internal" href="#author-s">Author(s)</a></li>
-<li><a class="reference internal" href="#members">Members</a></li>
-<li><a class="reference internal" href="#fdtdgeometrywriter.getPixelMaterial"><code class="docutils literal notranslate"><span class="pre">getPixelMaterial()</span></code></a></li>
+<li><a class="reference internal" href="#">3D-FDTD Geometry Writer</a><ul>
+<li><a class="reference internal" href="#documentation-for-the-3d-fdtd-geometry-writer">Documentation for the 3D-FDTD Geometry Writer</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getPixelMaterial">getPixelMaterial()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialBlock">MaterialBlock()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntryString">GeometryEntryString()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.WriteGeometry">WriteGeometry()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.DisplayPreview">DisplayPreview()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialLayerPreview">MaterialLayerPreview()</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#index">Index</a></li>
 </ul>
 
   </div>
@@ -134,7 +173,7 @@ pixels correspond to Current Material pixels with in-between colors</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FDTD Geometry Writer Documentation</a></li> 
+        <li class="nav-item nav-item-this"><a href="">3D-FDTD Geometry Writer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
