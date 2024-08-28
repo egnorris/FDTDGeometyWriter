@@ -3,9 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to FDTDGeometryWriter's documentation!
+FDTD Geometry Writer Documentation
 ==============================================
 
+Docmentation for 3D FDTD support function for 
+generating a geometry json file from an input
+png file
+.. automodule:: fdtdgeometrywriter.py
+   :members:
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
