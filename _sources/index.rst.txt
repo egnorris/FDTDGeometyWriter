@@ -3,25 +3,54 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-FDTD Geometry Writer Documentation
+3D-FDTD Geometry Writer
 ==============================================
 
-Docmentation for 3D FDTD support function for 
-generating a geometry json file from an input
-png file
+Documentation for the 3D-FDTD Geometry Writer
+----------------------------------------------
 
-.. automodule:: fdtdgeometrywriter
-   :members:
+
+
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
+getPixelMaterial()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.getPixelMaterial
+   :members:
 
+getMaterialList()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.getMaterialList
+   :members:
 
-Indices and tables
+MaterialBlock()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.MaterialBlock
+   :members:
+
+GeometryEntryString()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.GeometryEntryString
+   :members:
+
+WriteGeometry()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.WriteGeometry
+   :members:
+
+DisplayPreview()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.DisplayPreview
+   :members:
+
+MaterialLayerPreview()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.MaterialLayerPreview
+   :members:
+Index
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
