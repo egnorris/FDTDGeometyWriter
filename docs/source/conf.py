@@ -11,6 +11,11 @@ copyright = '2024, Evan Norris'
 author = 'Evan Norris'
 release = '2024'
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join('..', 'source')))
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 

@@ -9,8 +9,10 @@ FDTD Geometry Writer Documentation
 Docmentation for 3D FDTD support function for 
 generating a geometry json file from an input
 png file
-.. automodule:: fdtdgeometrywriter
+
+.. automodule:: fdtdgeometrywriter.getPixelColor()
    :members:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

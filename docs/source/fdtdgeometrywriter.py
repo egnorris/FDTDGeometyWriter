@@ -1,3 +1,14 @@
+"""Writes geometry.json for input image
+Description
+-----------
+
+Author(s)
+---------
+- Created by Evan Norris 08/28/2024.
+Members
+-------
+"""
+
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
