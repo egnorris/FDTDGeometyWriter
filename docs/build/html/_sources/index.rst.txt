@@ -45,6 +45,11 @@ MaterialLayerPreview()
 -----------------------------------------------
 .. automodule:: fdtdgeometrywriter.MaterialLayerPreview
    :members:
+
+WriteGeometryFile()
+-----------------------------------------------
+.. automodule:: fdtdgeometrywriter.WriteGeometryFile
+   :members:
    
 Index
 ==================
