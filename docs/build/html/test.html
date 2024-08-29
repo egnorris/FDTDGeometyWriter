@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About &#8212; FDTDGeometryWriter 2024 documentation</title>
+    <title>Tutorial &#8212; FDTDGeometryWriter 2024 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
     
@@ -15,7 +15,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorial" href="Tutorial.html" /> 
+    <link rel="prev" title="Geometry Writer" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
@@ -27,10 +27,10 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Tutorial.html" title="Tutorial"
-             accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">About</a></li> 
+          <a href="index.html" title="Geometry Writer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
     </div>  
 
@@ -39,31 +39,24 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="about">
-<h1>About<a class="headerlink" href="#about" title="Link to this heading">¶</a></h1>
-<p>Welcome to the Documentation for the 3D-FDTD geometry writer supporting program</p>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#required-input-files">Required Input Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#testing-image">Testing Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#pphinfoini-json">pphinfoini.json</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#params-json">params.json</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#material-detection-algorithm">Material Detection Algorithm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#writer-state">Writer State</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
-</ul>
 </div>
-</section>
+<p id="module-fdtdgeometrywriter.getPixelMaterial">Retrieve the Material of the Current Pixel.</p>
+<p>Take in a pixel of the material image and determine based on the
+RGB value if this pixel is the current material or the background
+material. White Pixels correspond to background material and Black
+pixels correspond to Current Material pixels with in-between colors
+are returned as 1</p>
+<dl class="field-list simple">
+<dt class="field-odd">param px<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current Pixel of Geometry Image File (Array)</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise</p>
+</dd>
+</dl>
 </section>
 
 
@@ -74,24 +67,14 @@
       <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
-    <h3><a href="#">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">About</a><ul>
-<li><a class="reference internal" href="#contents">Contents</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="Tutorial.html"
-                          title="next chapter">Tutorial</a></p>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Geometry Writer</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/index.md.txt"
+      <li><a href="_sources/test.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -119,10 +102,10 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Tutorial.html" title="Tutorial"
-             >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">About</a></li> 
+          <a href="index.html" title="Geometry Writer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
