@@ -2,245 +2,125 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
-def getImage(ImgPath):
-    """Retrieve Geometry Image from file.
-    Convert the image at the supplied file path to a numpy array 
-    and return to the user
 
-    Arg:
-        ImgPath: Path to Geometry Image File
-    
-    Returns:
-        geometry image as an RGBA array
+class GeometryEntry():
+    """GeometryEntry() Class that holds information needed to write to a geometry.json file.
+
+    An entry to the geometry.json file requires the following information
+
+        Position  -> Position of Center Point
+
+        Length    -> Geometry Size in Z-axis
+
+        Width     -> Geometry Size in X-axis
+
+        Thickness -> Geometry Size in Y-axis
+
+        Material  -> Material of Geometry 
+
+        Shape     -> Geometry Shape
+
+        Radius    -> Corner Radius of the Geometry Shape
+
+    This class holds this information about each geometry entry to later be written into 
+    the geometry.json file
     """
-    return np.asarray(Image.open(ImgPath))
-
-def getPixelMaterial(px):
-    """Retrieve the Material of the Current Pixel.
-    
-    Take in a pixel of the material image and determine based on the
-    RGB value if this pixel is the current material or the background
-    material. White Pixels correspond to background material and Black
-    pixels correspond to Current Material pixels with in-between colors
-    are returned as 1
-    
-    Args:
-        px: Current Pixel of Geometry Image File (Array) 
-
-    Returns:
-        Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise
-
-    """
-    R,G,B,_ = px
-    if R == 255 and G == 255 and B == 255:
-        return 0
-    elif R == 0 and G == 0 and B == 0:
-        return 1
-    else:
-        return 1
+    def __init__(self, Boundaries, Width, Material, Thickness):
+        self.Boundaries = Boundaries
+        self.Position = midpoint(Boundaries[0], Boundaries[1])
+        self.Length = 1
+        self.Width = Width
+        self.Thickness = Thickness
+        self.Material = Material
+        self.Shape = "Rectangle"
+        self.Radius = 1
 
 def midpoint(p0, p1):
-  return (int((p0[0] + p1[0])/2), int((p0[1] + p1[1])/2))
+    return (int((p0[0] + p1[0])/2), int((p0[1] + p1[1])/2))
 
-class MaterialBlock():
-  """Class to Hold Material Block Data.
+def rgba2state(pixels):
+    """rgba2state() Convert rgba values to a state vector.
 
-  A material block refers to an individual entry to the geometry.json
-  file this class contains all of the relevant information for an entry
-  to the geometry.json file including the following
-
-    Position  -> Midpoint of the material block, determined from Boundaries
-
-    Length    -> How long is the Material in the Current Layer, Always 1
-
-    Width     -> Number of Pixels in the material block
-
-    Thickness -> How thick the material layer is along the Propogation Axis
-
-    Material  -> Material Name for the material layer
-
-    Shape     -> Always "Rectangle"
-
-    Radius    -> How Rounded are the Corners, Always 1
-
-  """
-  def __init__(self, Boundaries, Width, Material, Thickness):
-    self.Boundaries = Boundaries
-    self.Position = midpoint(Boundaries[0], Boundaries[1])
-    self.Length = 1
-    self.Width = Width
-    self.Thickness = Thickness
-    self.Material = Material
-    self.Shape = "Rectangle"
-    self.Radius = 1
-
-def getMaterialList(image, Material, Thickness):
-    """Create a List of Current Material Geometry Information.
+    if an rgb value for an input pixel is anything other than (255, 255, 255) then the state is 1
+    otherwise the state is 0.
 
     Args:
-        image: material layer image
-        Material: material layer name
-        Thickness: thickness of curren material layer
+        pixels: a list of three pixel arrays corresponding to the previous, current, and next pixel
 
     Returns:
-        List of Material Block Objects
+        a 3-bit binary number represented as a vector denoting a state that Image2GeometryEntryList()
+        recognizes.
+
 
     """
-    a = image
-    Y = a.shape[0]
-    X = a.shape[1]
-    count = 0
-    StartBound = []
+    state = [0, 0, 0]
+    for i in range(len(pixels)):
+        R,G,B,_ = pixels[i]
+        if R != 255 or G != 255 or B != 255:
+            state[i] = 1
+    return state
+
+
+def Image2GeometryEntryList(img, material, thickness):
+    """Image2GeometryEntryList() function to convert image file to a list of GeometryEntry objects.
+
+        This is the main algorithm for this program, and how it works is detailed in the Tutorial
+        page but in general the process that is followed is for every pixel of the input image a
+        state vector is found by checking the value of the previous pixel, current pixel, and next
+        pixel where a white pixel is represented by 0 and a colored pixel is represented by 1. This
+        state vector has four useful states, [0, 1, 0] denoting a single pixel entry, [0, 1, 1]
+        denoting the beginning of a new entry, [1, 1, 1] denoting that a block should be added the 
+        current entry, and [1, 1, 0] denoting that the current block is the last block in the entry.
+        for each entry a GeometryEntry object is created and appended to a material list which is then
+        returned at the end.
+
+        Args:
+            img: png File Imported by the Python Image Library
+            material: name of the material corresponding to a index of refraction in the 3D-FDTD code
+            thickness: size of the material layer in the Y-axis, reported in number of pixels
+
+        Returns:
+            A list of GeometryEntry objects corresponding to each line of material detected in the 
+            image file
+
+    """
+    A = np.asarray(img)
+    y,x,_ = A.shape
+    B0 = []; B1 = []; width = 0
     MaterialList = []
-    EndBound = []
-    nBlocks = 0
-    for row in range(Y):
-        count = 0
-        for col in range(X):
-            if col == 0:
-                px1 = getPixelMaterial(a[row, col, :])
-                px2 = getPixelMaterial(a[row, col+1, :])
-                px0 = px1
-            elif col == X-1:
-                px0 = getPixelMaterial(a[row, col-1, :])
-                px1 = getPixelMaterial(a[row, col, :])
-                px2 = px1
-            else:
-                px0 = getPixelMaterial(a[row, col-1, :])
-                px1 = getPixelMaterial(a[row, col, :])
-                px2 = getPixelMaterial(a[row, col+1, :])
-
-            if px1 == 1 and px0 == 0:
-                count = 1
-                StartBound = (col, row)
-                nBlocks += 1
-
-            if px1 ==1 and px2 == 1:
-                count += 1
-
-            if px1 == 1 and px2 == 0:
-                EndBound = (col, row)
-                Bounds = [StartBound, EndBound]
-                temp = MaterialBlock(Boundaries = Bounds,
-                                        Width = count,
-                                        Material = Material,
-                                        Thickness = Thickness)
+    for row in range(len(A[:,0])):
+        #for now the first and last column of the image are not allowed
+        #to have information written to them so we don't include them in the loop
+        for col in range(1, x-1):
+            #the state reflects the material value at the previous, current
+            #and next pixel stated as a 3-bit binary number
+            state = rgba2state([A[row,col-1], A[row,col], A[row,col+1]])
+            if state == [0, 1, 0]:
+                #if the state is only 1 in the center digit there is only a
+                #single block of material so it can be written directly to
+                #the material list
+                temp = GeometryEntry(Boundaries = [(col, row), (col, row)],
+                    Width = 1,Material = material,Thickness = thickness)
                 MaterialList.append(temp)
-                count = 0
-    print(f"{nBlocks} Material Blocks Detected")
+            elif state == [0,1,1]:
+                #if only the first digit of the state is a zero then this
+                #is the first block of material in a run so we can state this
+                #as the left boundary coordinate and initialize the width counter
+                B0 = (col, row)
+                width = 1
+            elif state == [1,1,1]:
+                #if all digits of the state are one then we should have already started
+                #a new block and now we just need to add one to the width counter
+                width += 1
+            elif state == [1,1,0]:
+                #if only the last digit of the state is zero then we are in the last
+                #block of material which is the right boundary so we add the last pixel
+                #to the width counter and write the material information to the Material List
+                width += 1
+                B1 = (col, row)
+                temp = GeometryEntry(Boundaries = [B0, B1],
+                    Width = width,Material = material,Thickness = thickness)
+                MaterialList.append(temp)
+                width = 0
     return MaterialList
 
-def DisplayPreview(MaterialList, DomainSize):
-    """Plot a Preview of the MaterialBlocks.
-    """
-    fig_width = DomainSize[2]
-    fig_length = DomainSize[0]
-    scale = fig_length / fig_width
-    fig= plt.figure(figsize=(5,int(5*scale)))
-    for i in range(len(MaterialList)):
-        x, y = MaterialList[i].Position
-        xmin, ymin = MaterialList[i].Boundaries[0]
-        xmax, ymax = MaterialList[i].Boundaries[1]
-        plt.plot([xmin,xmax], [ymin,ymax], color = 'black')
-        plt.xlim(0,DomainSize[2])
-        plt.ylim(0,DomainSize[0])
-        plt.title("XZ Preview")
-    return plt.show()
-
-def GeometryEntryString(MaterialObject, stepsize, layer):
-    """Create a String for the geometry.json file entry.
-
-    Convert MaterialBlock Object into a json formatted string that
-    the geometry.json file writer is expecting
-
-    Args:
-        MaterialObject: MaterialBlock Object from list generated by getMaterialList
-        stepsize: FDTD step size from pphinfoini.json
-        layer: Layer index of the current material, should be defined in params.json
-    
-    Returns:
-        formatted string for the current geometry.json entry
-    """
-    x, z = M.Position
-    y = layer
-    l1 = f'"shape": "{MaterialObject.Shape}",'
-    l2 = f'"radius": {MaterialObject.Radius}e-9,'
-    l3 = f'"length": {MaterialObject.Length}e-9,'
-    l4 = f'"width": {MaterialObject.Width}e-9,'
-    l5 = f'"thickness": {MaterialObject.Thickness}e-9,'
-    l6 = f'"material": "{MaterialObject.Material}",'
-    l7 = f'"position": [{x},{y},{z}]'
-    return "{" + l1 + l2 + l3 + l4 + l5 + l6 + l7 + "}"
-
-
-
-def MaterialLayerPreview(MaterialLayer, MaterialThickness, MaterialLabels, DomainSize):
-    """Plot a Preview of the Material Layer Placement.
-    """
-    fig, ax = plt.subplots()
-    fig_width = DomainSize[2]
-    fig_length = DomainSize[1]
-    scale = fig_length / fig_width
-    fig.set_figheight(5*scale)
-    fig.set_figwidth(5)
-    plt.ylim(0,DomainSize[1])
-    plt.xlim(0,DomainSize[2])
-    coord = [[0,0], [0,DomainSize[1]], [DomainSize[2],DomainSize[1]], [DomainSize[2],0]]
-    p = Polygon(coord, facecolor = 'cyan', label="Vacuum")
-    ax.add_patch(p)
-    for i in range(len(MaterialLayer)):
-        coord = [[DomainSize[2]/2+DomainSize[2],MaterialLayer[i]+MaterialThickness[i]/2],
-            [DomainSize[2]/2+DomainSize[2], MaterialLayer[i]-MaterialThickness[i]/2],
-            [DomainSize[2]/2-DomainSize[2], MaterialLayer[i]-MaterialThickness[i]/2],
-            [DomainSize[2]/2-DomainSize[2], MaterialLayer[i]+MaterialThickness[i]/2]]
-        if i == 0:
-            p = Polygon(coord, facecolor = 'orange', label=MaterialLabels[i])
-        elif i == 1:
-            p = Polygon(coord, facecolor = 'green', label=MaterialLabels[i])
-        elif i == 2:
-            p = Polygon(coord, facecolor = 'red', label=MaterialLabels[i])
-        elif i == 3:
-            p = Polygon(coord, facecolor = 'purple', label=MaterialLabels[i])
-        elif i == 4:
-            p = Polygon(coord, facecolor = 'brown', label=MaterialLabels[i])
-        elif i == 5:
-            p = Polygon(coord, facecolor = 'pink', label=MaterialLabels[i])
-        elif i == 6:
-            p = Polygon(coord, facecolor = 'gray', label=MaterialLabels[i])
-        elif i == 7:
-            p = Polygon(coord, facecolor = 'olive', label=MaterialLabels[i])
-        elif i == 8:
-            p = Polygon(coord, facecolor = 'blue', label=MaterialLabels[i])
-        ax.add_patch(p)
-    plt.legend()
-    plt.title("Material Layer Preview")
-    plt.show()
-
-def WriteGeometryFile(MaterialLayer, MaterialThickness, MaterialLabel, MaterialImages, StepSize, DomainSize):
-    """Write Materials to geometry.json file.
-
-    Generate the geometry.json file with each material described in the params.json file being accounted for
-
-    Args:
-        MaterialLayer: List of Material Layer Placement Indices provided by params.json
-        MaterialThickness: List of Material Thickness Values provided by params.json
-        MaterialLabel: List of Material Labels corresponding to 3DFDTD materials provided by params.json
-        MaterialImages: List of Image Arrays for each Material in the List
-    """
-    f = open("geometry.json", 'w')
-    f.write('[')
-    f.close()
-    f = open("geometry.json", 'a')
-    for i in range(len(MaterialLabel)):
-        MaterialList = getMaterialList(MaterialImages[i], MaterialLabel[i], MaterialThickness[i])
-        for k in range(len(MaterialList)-1):
-            f.write(GeometryEntryString(MaterialList[k], StepSize, MaterialLayer[i]))
-            f.write(',')
-        f.write(GeometryEntryString(MaterialList[-1], StepSize, MaterialLayer[i]))
-        if i != len(MaterialLabel)-1:
-            f.write(',')
-    f.write(']')
-    f.close()
-
-
-    
