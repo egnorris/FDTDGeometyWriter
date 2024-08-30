@@ -2,6 +2,8 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
+import matplotlib as mpl
+import json
 
 class GeometryEntry():
     """GeometryEntry() Class that holds information needed to write to a geometry.json file.
@@ -76,7 +78,7 @@ def Image2GeometryEntryList(img, material, thickness):
 
         Args:
             img: png File Imported by the Python Image Library
-            material: name of the material corresponding to a index of refraction in the 3D-FDTD code
+            material: name of the material corresponding to the index of refraction in the 3D-FDTD code
             thickness: size of the material layer in the Y-axis, reported in number of pixels
 
         Returns:
@@ -124,3 +126,126 @@ def Image2GeometryEntryList(img, material, thickness):
                 width = 0
     return MaterialList
 
+
+def SetupColor(colormap = 'tab20', nlines = 20):
+    n_lines = nlines
+    cmap = mpl.colormaps[colormap]
+    return cmap(np.linspace(0, 1, n_lines))
+    
+def PreviewLayerPlacement(params):
+    """PreviewLayerPlacement() Display visulization of Material Layer Placement in Y-X Plane.
+
+    Args:
+        LayerList: A list of layer placement for each to be written to the geometry.json file
+        ThicknessList: A list of material size in the Y Axis for each material to to be written
+                to the geometry.json file
+        LabelList: A list of materials corresponding to the index of refraction in the 3D-FDTD code
+            for each material to to be written to the geometry.json file
+        Domain: Size of the 3D FDTD simulation domain
+
+    Returns:
+        pyplot figure
+    """
+
+    print("Warning: This only uses Material Thickness and Placement Data, the x-axis data is not based on Geometry Size")
+
+    Domain = params["DomainSize"]
+    LayerList = params["MaterialLayer"]
+    ThicknessList = params["MaterialThickness"]
+    LabelList = params["MaterialLabel"]
+    fig, ax = plt.subplots()
+    fig_width = Domain[2]
+    fig_length = Domain[1]
+    scale = fig_length / fig_width
+    fig.set_figheight(10*scale)
+    fig.set_figwidth(10)
+    plt.ylim(0,Domain[1])
+    plt.xlim(0,Domain[2])
+    colors = SetupColor()
+
+    coord = [[0,0], [0,Domain[1]], [Domain[2],Domain[1]], [Domain[2],0]]
+    p = Polygon(coord, facecolor = 'white', label="Vacuum")
+    ax.add_patch(p)
+
+    for i in range(len(LayerList)):
+        coord = [[Domain[2]/2+Domain[2],LayerList[i]+ThicknessList[i]/2],
+            [Domain[2]/2+Domain[2], LayerList[i]-ThicknessList[i]/2],
+            [Domain[2]/2-Domain[2], LayerList[i]-ThicknessList[i]/2],
+            [Domain[2]/2-Domain[2], LayerList[i]+ThicknessList[i]/2]]
+        p = Polygon(coord, facecolor = colors[i,:], label = LabelList[i])
+        ax.add_patch(p)
+    #plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.legend()
+    plt.title("Material Layer Preview")
+    plt.savefig("GeometryLayerPreview.png")
+    plt.show()
+
+def getEntry(G, MaterialLayer, StepSize):
+    return {
+            "shape": f"{G.Shape}",
+            "radius": f"{G.Radius * StepSize[0]}",
+            "length": f"{G.Length * StepSize[2]}",
+            "width": f"{G.Width * StepSize[0]}",
+            "thickness": f"{int(G.Thickness) * StepSize[1]}",
+            "material": f"{G.Material}",
+            "position": f"[{G.Position[0]},{MaterialLayer},{G.Position[1]}]"}
+
+def getParams(pphinfoFilePath, paramsFilePath):
+    f = open(paramsFilePath)
+    params = json.load(f)
+    f.close()
+    MaterialLayer = params['MaterialLayer']
+    MaterialThickness = params['MaterialThickness']
+    MaterialLabel = params['MaterialLabel']
+    MaterialImagePath = params['MaterialImagePath']
+    MaterialImages = []
+    for i in range(len(MaterialLabel)):
+        if i >= len(MaterialImagePath):
+            #if more materials are being used than image paths then use the last defined image
+            #path for all remaining shapes
+            MaterialImages.append(Image.open(MaterialImagePath[len(MaterialImagePath)-1]))
+        else:
+            MaterialImages.append(Image.open(MaterialImagePath[i]))
+    f = open(pphinfoFilePath)
+    params = json.load(f)
+    f.close()
+    DomainSize = params["Domain Size"]
+    StepSize = params["Step Size"]
+    CenterPosition = params["Center Position"]
+    return {
+        "MaterialLayer": MaterialLayer,
+        "MaterialThickness": MaterialThickness,
+        "MaterialLabel": MaterialLabel,
+        "MaterialImages": MaterialImages,
+        "DomainSize": DomainSize,
+        "StepSize": StepSize,
+        "CenterPosition": CenterPosition}
+
+def writeGeometry(filepath,params):
+    MaterialLayer = params["MaterialLayer"]
+    MaterialThickness = params["MaterialThickness"]
+    MaterialLabel = params["MaterialLabel"]
+    MaterialImages = params["MaterialImages"]
+    StepSize = params["DomainSize"]
+    while True:
+        try:
+            f = open(filepath, "x")
+            f.close()
+            break
+        except FileExistsError:
+            f = open(filepath, "w")
+            f.close()
+            break
+    f = open(filepath, "w")
+    f.write("[")
+    for i in range(len(MaterialLabel)):
+        G = Image2GeometryEntryList(MaterialImages[i], MaterialLabel[i], MaterialThickness[i])
+        for k in range(len(G)-2):
+            Entry = getEntry(G[k], MaterialLayer[i], StepSize)
+            json.dump(Entry, f)
+            f.write(",")
+        Entry = getEntry(G[k], MaterialLayer[i], StepSize)
+        json.dump(Entry, f)
+        if i <= len(MaterialLabel)-2:
+            f.write(",")
+    f.write("]")
