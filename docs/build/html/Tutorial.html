@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 
-<html lang="Python 3.8.10" data-content_root="./">
+<html lang="Python 3.8.10">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Tutorial &#8212; FDTDGeometryWriter 2024 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
-    <script src="_static/documentation_options.js?v=2cd87a26"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=a31aa02c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Usage" href="Usage.html" />
     <link rel="prev" title="About" href="index.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="Related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,16 +44,16 @@
           <div class="body" role="main">
             
   <section id="tutorial">
-<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">¶</a></h1>
 <section id="required-input-files">
-<h2>Required Input Files<a class="headerlink" href="#required-input-files" title="Link to this heading">¶</a></h2>
+<h2>Required Input Files<a class="headerlink" href="#required-input-files" title="Permalink to this heading">¶</a></h2>
 <section id="testing-image">
-<h3>Testing Image<a class="headerlink" href="#testing-image" title="Link to this heading">¶</a></h3>
-<p>Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg.
-<img alt="image" src="_images/170x160-1cell.png" /></p>
+<h3>Testing Image<a class="headerlink" href="#testing-image" title="Permalink to this heading">¶</a></h3>
+<p>Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg.</p>
+<p><img alt="image" src="_images/170x160-1cell.png" /></p>
 </section>
 <section id="pphinfoini-json">
-<h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Link to this heading">¶</a></h3>
+<h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;Domain Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
       <span class="s2">&quot;Domain Decomposition&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
@@ -73,7 +73,7 @@
 </div>
 </section>
 <section id="params-json">
-<h3>params.json<a class="headerlink" href="#params-json" title="Link to this heading">¶</a></h3>
+<h3>params.json<a class="headerlink" href="#params-json" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;MaterialLayer&quot;</span><span class="p">:[</span><span class="mi">164</span><span class="p">,</span> <span class="mf">151.5</span><span class="p">],</span>
       <span class="s2">&quot;MaterialThickness&quot;</span><span class="p">:[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
@@ -85,12 +85,12 @@
 </section>
 </section>
 <section id="material-detection-algorithm">
-<h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Link to this heading">¶</a></h2>
+<h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>The primary mechanism of this program lies in the getMaterialList() subroutine which analyzes the input image and
 converts from a raster image to a list of materials to be written to a geometry.json file. Rather than writing each
 image pixel to an entry in the geometry.json this code converts lines of pixels into a single geometry entry.</p>
 <section id="module-fdtdgeometrywriter.getMaterialList">
-<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Link to this heading">¶</a></h3>
+<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Permalink to this heading">¶</a></h3>
 <p>Create a List of Current Material Geometry Information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param image<span class="colon">:</span></dt>
@@ -108,7 +108,7 @@ image pixel to an entry in the geometry.json this code converts lines of pixels 
 </dl>
 </section>
 <section id="writer-state">
-<h3>Writer State<a class="headerlink" href="#writer-state" title="Link to this heading">¶</a></h3>
+<h3>Writer State<a class="headerlink" href="#writer-state" title="Permalink to this heading">¶</a></h3>
 <p>The analysis scans every pixel and retreives a 3-bit binary string that is used as the &quot;state&quot; of the writer this
 this string is built from the pixel at the previous index, the current pixel, and the pixel at the next index. There
 are four such states detailed in the below image.</p>
@@ -122,7 +122,7 @@ are four such states detailed in the below image.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -161,7 +161,7 @@ are four such states detailed in the below image.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<search id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -169,13 +169,13 @@ are four such states detailed in the below image.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</search>
+</div>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="Related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -196,7 +196,7 @@ are four such states detailed in the below image.</p>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2024, Evan Norris.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

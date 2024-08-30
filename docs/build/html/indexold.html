@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="Python 3.8.10" data-content_root="./">
+<html lang="Python 3.8.10">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3D-FDTD Geometry Writer &#8212; FDTDGeometryWriter 2024 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
-    <script src="_static/documentation_options.js?v=2cd87a26"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=a31aa02c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="Related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -36,14 +36,14 @@
           <div class="body" role="main">
             
   <section id="d-fdtd-geometry-writer">
-<h1>3D-FDTD Geometry Writer<a class="headerlink" href="#d-fdtd-geometry-writer" title="Link to this heading">¶</a></h1>
+<h1>3D-FDTD Geometry Writer<a class="headerlink" href="#d-fdtd-geometry-writer" title="Permalink to this heading">¶</a></h1>
 <section id="documentation-for-the-3d-fdtd-geometry-writer">
-<h2>Documentation for the 3D-FDTD Geometry Writer<a class="headerlink" href="#documentation-for-the-3d-fdtd-geometry-writer" title="Link to this heading">¶</a></h2>
+<h2>Documentation for the 3D-FDTD Geometry Writer<a class="headerlink" href="#documentation-for-the-3d-fdtd-geometry-writer" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
 </section>
 <section id="module-fdtdgeometrywriter.getPixelMaterial">
-<span id="getpixelmaterial"></span><h2>getPixelMaterial()<a class="headerlink" href="#module-fdtdgeometrywriter.getPixelMaterial" title="Link to this heading">¶</a></h2>
+<span id="getpixelmaterial"></span><h2>getPixelMaterial()<a class="headerlink" href="#module-fdtdgeometrywriter.getPixelMaterial" title="Permalink to this heading">¶</a></h2>
 <p>Retrieve the Material of the Current Pixel.</p>
 <p>Take in a pixel of the material image and determine based on the
 RGB value if this pixel is the current material or the background
@@ -60,7 +60,7 @@ are returned as 1</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.getMaterialList">
-<span id="getmateriallist"></span><h2>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Link to this heading">¶</a></h2>
+<span id="getmateriallist"></span><h2>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Permalink to this heading">¶</a></h2>
 <p>Create a List of Current Material Geometry Information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param image<span class="colon">:</span></dt>
@@ -78,7 +78,7 @@ are returned as 1</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.MaterialBlock">
-<span id="materialblock"></span><h2>MaterialBlock()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialBlock" title="Link to this heading">¶</a></h2>
+<span id="materialblock"></span><h2>MaterialBlock()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialBlock" title="Permalink to this heading">¶</a></h2>
 <p>Class to Hold Material Block Data.</p>
 <p>A material block refers to an individual entry to the geometry.json
 file this class contains all of the relevant information for an entry
@@ -94,7 +94,7 @@ to the geometry.json file including the following</p>
 </div></blockquote>
 </section>
 <section id="module-fdtdgeometrywriter.GeometryEntryString">
-<span id="geometryentrystring"></span><h2>GeometryEntryString()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntryString" title="Link to this heading">¶</a></h2>
+<span id="geometryentrystring"></span><h2>GeometryEntryString()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntryString" title="Permalink to this heading">¶</a></h2>
 <p>Create a String for the geometry.json file entry.</p>
 <p>Convert MaterialBlock Object into a json formatted string that
 the geometry.json file writer is expecting</p>
@@ -114,15 +114,15 @@ the geometry.json file writer is expecting</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.DisplayPreview">
-<span id="displaypreview"></span><h2>DisplayPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.DisplayPreview" title="Link to this heading">¶</a></h2>
+<span id="displaypreview"></span><h2>DisplayPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.DisplayPreview" title="Permalink to this heading">¶</a></h2>
 <p>Plot a Preview of the MaterialBlocks.</p>
 </section>
 <section id="module-fdtdgeometrywriter.MaterialLayerPreview">
-<span id="materiallayerpreview"></span><h2>MaterialLayerPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialLayerPreview" title="Link to this heading">¶</a></h2>
+<span id="materiallayerpreview"></span><h2>MaterialLayerPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialLayerPreview" title="Permalink to this heading">¶</a></h2>
 <p>Plot a Preview of the Material Layer Placement.</p>
 </section>
 <section id="module-fdtdgeometrywriter.WriteGeometryFile">
-<span id="writegeometryfile"></span><h2>WriteGeometryFile()<a class="headerlink" href="#module-fdtdgeometrywriter.WriteGeometryFile" title="Link to this heading">¶</a></h2>
+<span id="writegeometryfile"></span><h2>WriteGeometryFile()<a class="headerlink" href="#module-fdtdgeometrywriter.WriteGeometryFile" title="Permalink to this heading">¶</a></h2>
 <p>Write Materials to geometry.json file.</p>
 <p>Generate the geometry.json file with each material described in the params.json file being accounted for</p>
 <dl class="field-list simple">
@@ -142,7 +142,7 @@ the geometry.json file writer is expecting</p>
 </section>
 </section>
 <section id="index">
-<h1>Index<a class="headerlink" href="#index" title="Link to this heading">¶</a></h1>
+<h1>Index<a class="headerlink" href="#index" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
@@ -153,7 +153,7 @@ the geometry.json file writer is expecting</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -180,7 +180,7 @@ the geometry.json file writer is expecting</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<search id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -188,13 +188,13 @@ the geometry.json file writer is expecting</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</search>
+</div>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="Related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -209,7 +209,7 @@ the geometry.json file writer is expecting</p>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2024, Evan Norris.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

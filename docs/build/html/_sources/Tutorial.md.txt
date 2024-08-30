@@ -4,6 +4,7 @@
 
 ### Testing Image
 Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg. 
+
 ![image](../../Test/io/170x160-1cell.png)
 
 ### pphinfoini.json
