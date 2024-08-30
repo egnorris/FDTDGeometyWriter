@@ -2,5 +2,5 @@
     "MaterialLayer":[164, 151.5],
     "MaterialThickness":[25, 3],
     "MaterialLabel":["Gold", "Chromium"],
-    "MaterialImagePath":["io/TestShape.png", "io/TestShape.png", "io/TestShape.png"]
+    "MaterialImagePath":["io/170x160-1cell.png", "io/170x160-1cell.png", "io/170x160-1cell.png"]
 }
