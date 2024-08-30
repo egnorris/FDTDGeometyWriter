@@ -39,22 +39,67 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="module-fdtdgeometrywriter.getPixelMaterial">
-<span id="usage"></span><h1>Usage<a class="headerlink" href="#module-fdtdgeometrywriter.getPixelMaterial" title="Permalink to this heading">¶</a></h1>
-<p>Retrieve the Material of the Current Pixel.</p>
-<p>Take in a pixel of the material image and determine based on the
-RGB value if this pixel is the current material or the background
-material. White Pixels correspond to background material and Black
-pixels correspond to Current Material pixels with in-between colors
-are returned as 1</p>
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h1>
+<section id="module-fdtdgeometrywriter.GeometryEntry">
+<span id="geometryentry"></span><h2>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Permalink to this heading">¶</a></h2>
+<p>GeometryEntry() Class that holds information needed to write to a geometry.json file.</p>
+<p>An entry to the geometry.json file requires the following information</p>
+<blockquote>
+<div><p>Position  -&gt; Position of Center Point</p>
+<p>Length    -&gt; Geometry Size in Z-axis</p>
+<p>Width     -&gt; Geometry Size in X-axis</p>
+<p>Thickness -&gt; Geometry Size in Y-axis</p>
+<p>Material  -&gt; Material of Geometry</p>
+<p>Shape     -&gt; Geometry Shape</p>
+<p>Radius    -&gt; Corner Radius of the Geometry Shape</p>
+</div></blockquote>
+<p>This class holds this information about each geometry entry to later be written into
+the geometry.json file</p>
+</section>
+<section id="module-fdtdgeometrywriter.rgba2state">
+<span id="rgba2state"></span><h2>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Permalink to this heading">¶</a></h2>
+<p>rgba2state() Convert rgba values to a state vector.</p>
+<p>if an rgb value for an input pixel is anything other than (255, 255, 255) then the state is 1
+otherwise the state is 0.</p>
 <dl class="field-list simple">
-<dt class="field-odd">param px<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Current Pixel of Geometry Image File (Array)</p>
+<dt class="field-odd">param pixels<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a list of three pixel arrays corresponding to the previous, current, and next pixel</p>
 </dd>
 <dt class="field-even">returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise</p>
+<dd class="field-even"><p>a 3-bit binary number represented as a vector denoting a state that Image2GeometryEntryList()
+recognizes.</p>
 </dd>
 </dl>
+</section>
+<section id="module-fdtdgeometrywriter.Image2GeometryEntryList">
+<span id="image2geometryentrylist"></span><h2>Image2GeometryEntryList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Permalink to this heading">¶</a></h2>
+<p>Image2GeometryEntryList() function to convert image file to a list of GeometryEntry objects.</p>
+<p>This is the main algorithm for this program, and how it works is detailed in the Tutorial
+page but in general the process that is followed is for every pixel of the input image a
+state vector is found by checking the value of the previous pixel, current pixel, and next
+pixel where a white pixel is represented by 0 and a colored pixel is represented by 1. This
+state vector has four useful states, [0, 1, 0] denoting a single pixel entry, [0, 1, 1]
+denoting the beginning of a new entry, [1, 1, 1] denoting that a block should be added the
+current entry, and [1, 1, 0] denoting that the current block is the last block in the entry.
+for each entry a GeometryEntry object is created and appended to a material list which is then
+returned at the end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param img<span class="colon">:</span></dt>
+<dd class="field-odd"><p>png File Imported by the Python Image Library</p>
+</dd>
+<dt class="field-even">param material<span class="colon">:</span></dt>
+<dd class="field-even"><p>name of the material corresponding to a index of refraction in the 3D-FDTD code</p>
+</dd>
+<dt class="field-odd">param thickness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>size of the material layer in the Y-axis, reported in number of pixels</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of GeometryEntry objects corresponding to each line of material detected in the
+image file</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -64,6 +109,18 @@ are returned as 1</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntry">GeometryEntry()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.rgba2state">rgba2state()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.Image2GeometryEntryList">Image2GeometryEntryList()</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="Tutorial.html"

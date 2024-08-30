@@ -89,23 +89,8 @@
 <p>The primary mechanism of this program lies in the getMaterialList() subroutine which analyzes the input image and
 converts from a raster image to a list of materials to be written to a geometry.json file. Rather than writing each
 image pixel to an entry in the geometry.json this code converts lines of pixels into a single geometry entry.</p>
-<section id="module-fdtdgeometrywriter.getMaterialList">
-<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Permalink to this heading">¶</a></h3>
-<p>Create a List of Current Material Geometry Information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">param image<span class="colon">:</span></dt>
-<dd class="field-odd"><p>material layer image</p>
-</dd>
-<dt class="field-even">param Material<span class="colon">:</span></dt>
-<dd class="field-even"><p>material layer name</p>
-</dd>
-<dt class="field-odd">param Thickness<span class="colon">:</span></dt>
-<dd class="field-odd"><p>thickness of curren material layer</p>
-</dd>
-<dt class="field-even">returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>List of Material Block Objects</p>
-</dd>
-</dl>
+<section id="getmateriallist">
+<h3>getMaterialList()<a class="headerlink" href="#getmateriallist" title="Permalink to this heading">¶</a></h3>
 </section>
 <section id="writer-state">
 <h3>Writer State<a class="headerlink" href="#writer-state" title="Permalink to this heading">¶</a></h3>
@@ -135,7 +120,7 @@ are four such states detailed in the below image.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#material-detection-algorithm">Material Detection Algorithm</a><ul>
-<li><a class="reference internal" href="#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
+<li><a class="reference internal" href="#getmateriallist">getMaterialList()</a></li>
 <li><a class="reference internal" href="#writer-state">Writer State</a></li>
 </ul>
 </li>
