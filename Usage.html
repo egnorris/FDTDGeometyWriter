@@ -89,7 +89,7 @@ returned at the end.</p>
 <dd class="field-odd"><p>png File Imported by the Python Image Library</p>
 </dd>
 <dt class="field-even">param material<span class="colon">:</span></dt>
-<dd class="field-even"><p>name of the material corresponding to a index of refraction in the 3D-FDTD code</p>
+<dd class="field-even"><p>name of the material corresponding to the index of refraction in the 3D-FDTD code</p>
 </dd>
 <dt class="field-odd">param thickness<span class="colon">:</span></dt>
 <dd class="field-odd"><p>size of the material layer in the Y-axis, reported in number of pixels</p>
@@ -97,6 +97,77 @@ returned at the end.</p>
 <dt class="field-even">returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A list of GeometryEntry objects corresponding to each line of material detected in the
 image file</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.PreviewLayerPlacement">
+<span id="previewlayerplacement"></span><h2>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Permalink to this heading">¶</a></h2>
+<p>PreviewLayerPlacement() Display visulization of Material Layer Placement in Y-X Plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param LayerList<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of layer placement for each to be written to the geometry.json file</p>
+</dd>
+<dt class="field-even">param ThicknessList<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of material size in the Y Axis for each material to to be written
+to the geometry.json file</p>
+</dd>
+<dt class="field-odd">param LabelList<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of materials corresponding to the index of refraction in the 3D-FDTD code
+for each material to to be written to the geometry.json file</p>
+</dd>
+<dt class="field-even">param Domain<span class="colon">:</span></dt>
+<dd class="field-even"><p>Size of the 3D FDTD simulation domain</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pyplot figure</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.getEntry">
+<span id="getentry"></span><h2>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Permalink to this heading">¶</a></h2>
+<p>getEntry() convert a GeometryEntry object to a dictionary for geometry.json entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param G<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Geometry Entry Object</p>
+</dd>
+<dt class="field-even">param MaterialLayer<span class="colon">:</span></dt>
+<dd class="field-even"><p>Y-axis position of Geometry Entry Object in the 3D-FDTD Simulation</p>
+</dd>
+<dt class="field-odd">param StepSize<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3 Element vector of step sizes retrieved from pphinfoini.json</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a dictionary for geometry.json entry</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.getParams">
+<span id="getparams"></span><h2>getParams()<a class="headerlink" href="#module-fdtdgeometrywriter.getParams" title="Permalink to this heading">¶</a></h2>
+<p>getParams() open input files and convert them to a single params dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param pphinfoFilePath<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pphinfoini.json file path</p>
+</dd>
+<dt class="field-even">param paramsFilePath<span class="colon">:</span></dt>
+<dd class="field-even"><p>params.json file path</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A single parameters dictionary</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.writeGeometry">
+<span id="writegeometry"></span><h2>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Permalink to this heading">¶</a></h2>
+<p>writeGeometry() Write Geometry Entry Objects to a geometry.json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">param filepath<span class="colon">:</span></dt>
+<dd class="field-odd"><p>path where geometry.json will be saved</p>
+</dd>
+<dt class="field-even">param params<span class="colon">:</span></dt>
+<dd class="field-even"><p>paramter dictionary constructed from pphinfoini.json and params.json</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A single parameters dictionary</p>
 </dd>
 </dl>
 </section>
@@ -116,6 +187,10 @@ image file</p>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntry">GeometryEntry()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.rgba2state">rgba2state()</a></li>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.Image2GeometryEntryList">Image2GeometryEntryList()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.PreviewLayerPlacement">PreviewLayerPlacement()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getEntry">getEntry()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getParams">getParams()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.writeGeometry">writeGeometry()</a></li>
 </ul>
 </li>
 </ul>

@@ -42,7 +42,7 @@ converts from a raster image to a list of materials to be written to a geometry.
 image pixel to an entry in the geometry.json this code converts lines of pixels into a single geometry entry. 
 ### getMaterialList()
 ```{eval-rst}
-.. automodule:: fdtdgeometrywriter.getMaterialList()
+.. automodule:: fdtdgeometrywriter.Image2GeometryEntryList
    :members:
 ```
 ### Writer State
