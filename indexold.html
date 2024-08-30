@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="Python 3.8.10" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3D-FDTD Geometry Writer &#8212; FDTDGeometryWriter 2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=2cd87a26"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">3D-FDTD Geometry Writer</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="d-fdtd-geometry-writer">
+<h1>3D-FDTD Geometry Writer<a class="headerlink" href="#d-fdtd-geometry-writer" title="Link to this heading">¶</a></h1>
+<section id="documentation-for-the-3d-fdtd-geometry-writer">
+<h2>Documentation for the 3D-FDTD Geometry Writer<a class="headerlink" href="#documentation-for-the-3d-fdtd-geometry-writer" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-fdtdgeometrywriter.getPixelMaterial">
+<span id="getpixelmaterial"></span><h2>getPixelMaterial()<a class="headerlink" href="#module-fdtdgeometrywriter.getPixelMaterial" title="Link to this heading">¶</a></h2>
+<p>Retrieve the Material of the Current Pixel.</p>
+<p>Take in a pixel of the material image and determine based on the
+RGB value if this pixel is the current material or the background
+material. White Pixels correspond to background material and Black
+pixels correspond to Current Material pixels with in-between colors
+are returned as 1</p>
+<dl class="field-list simple">
+<dt class="field-odd">param px<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current Pixel of Geometry Image File (Array)</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Material State - Either 0 for vacuum, 1 for current material, or 1 otherwise</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.getMaterialList">
+<span id="getmateriallist"></span><h2>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Link to this heading">¶</a></h2>
+<p>Create a List of Current Material Geometry Information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param image<span class="colon">:</span></dt>
+<dd class="field-odd"><p>material layer image</p>
+</dd>
+<dt class="field-even">param Material<span class="colon">:</span></dt>
+<dd class="field-even"><p>material layer name</p>
+</dd>
+<dt class="field-odd">param Thickness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>thickness of curren material layer</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of Material Block Objects</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.MaterialBlock">
+<span id="materialblock"></span><h2>MaterialBlock()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialBlock" title="Link to this heading">¶</a></h2>
+<p>Class to Hold Material Block Data.</p>
+<p>A material block refers to an individual entry to the geometry.json
+file this class contains all of the relevant information for an entry
+to the geometry.json file including the following</p>
+<blockquote>
+<div><p>Position  -&gt; Midpoint of the material block, determined from Boundaries</p>
+<p>Length    -&gt; How long is the Material in the Current Layer, Always 1</p>
+<p>Width     -&gt; Number of Pixels in the material block</p>
+<p>Thickness -&gt; How thick the material layer is along the Propogation Axis</p>
+<p>Material  -&gt; Material Name for the material layer</p>
+<p>Shape     -&gt; Always &quot;Rectangle&quot;</p>
+<p>Radius    -&gt; How Rounded are the Corners, Always 1</p>
+</div></blockquote>
+</section>
+<section id="module-fdtdgeometrywriter.GeometryEntryString">
+<span id="geometryentrystring"></span><h2>GeometryEntryString()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntryString" title="Link to this heading">¶</a></h2>
+<p>Create a String for the geometry.json file entry.</p>
+<p>Convert MaterialBlock Object into a json formatted string that
+the geometry.json file writer is expecting</p>
+<dl class="field-list simple">
+<dt class="field-odd">param MaterialObject<span class="colon">:</span></dt>
+<dd class="field-odd"><p>MaterialBlock Object from list generated by getMaterialList</p>
+</dd>
+<dt class="field-even">param stepsize<span class="colon">:</span></dt>
+<dd class="field-even"><p>FDTD step size from pphinfoini.json</p>
+</dd>
+<dt class="field-odd">param layer<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Layer index of the current material, should be defined in params.json</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>formatted string for the current geometry.json entry</p>
+</dd>
+</dl>
+</section>
+<section id="module-fdtdgeometrywriter.DisplayPreview">
+<span id="displaypreview"></span><h2>DisplayPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.DisplayPreview" title="Link to this heading">¶</a></h2>
+<p>Plot a Preview of the MaterialBlocks.</p>
+</section>
+<section id="module-fdtdgeometrywriter.MaterialLayerPreview">
+<span id="materiallayerpreview"></span><h2>MaterialLayerPreview()<a class="headerlink" href="#module-fdtdgeometrywriter.MaterialLayerPreview" title="Link to this heading">¶</a></h2>
+<p>Plot a Preview of the Material Layer Placement.</p>
+</section>
+<section id="module-fdtdgeometrywriter.WriteGeometryFile">
+<span id="writegeometryfile"></span><h2>WriteGeometryFile()<a class="headerlink" href="#module-fdtdgeometrywriter.WriteGeometryFile" title="Link to this heading">¶</a></h2>
+<p>Write Materials to geometry.json file.</p>
+<p>Generate the geometry.json file with each material described in the params.json file being accounted for</p>
+<dl class="field-list simple">
+<dt class="field-odd">param MaterialLayer<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of Material Layer Placement Indices provided by params.json</p>
+</dd>
+<dt class="field-even">param MaterialThickness<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of Material Thickness Values provided by params.json</p>
+</dd>
+<dt class="field-odd">param MaterialLabel<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of Material Labels corresponding to 3DFDTD materials provided by params.json</p>
+</dd>
+<dt class="field-even">param MaterialImages<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of Image Arrays for each Material in the List</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="index">
+<h1>Index<a class="headerlink" href="#index" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">3D-FDTD Geometry Writer</a><ul>
+<li><a class="reference internal" href="#documentation-for-the-3d-fdtd-geometry-writer">Documentation for the 3D-FDTD Geometry Writer</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getPixelMaterial">getPixelMaterial()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialBlock">MaterialBlock()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntryString">GeometryEntryString()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.DisplayPreview">DisplayPreview()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.MaterialLayerPreview">MaterialLayerPreview()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.WriteGeometryFile">WriteGeometryFile()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#index">Index</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/indexold.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">3D-FDTD Geometry Writer</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Evan Norris.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    </div>
+  </body>
+</html>
