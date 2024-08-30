@@ -1,5 +1,5 @@
 {
-	"Domain Size": [500, 300, 500],
+	"Domain Size": [1000, 300, 1000],
 	"Domain Decomposition": [4, 4, 4],
 	"Step Size": [1e-9, 1e-9, 1e-9],
 	"PML Box": [20, 20, 20],
@@ -11,5 +11,5 @@
 	"Minimum Wavelength": 500e-09,
 	"Maximum Wavelength": 1500e-09,
 	"ANTENNA_TYPE": 1000,
-	"Center Position": [250, 150, 250]
+	"Center Position": [500, 150, 500]
 }

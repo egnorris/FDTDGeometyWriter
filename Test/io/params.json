@@ -1,6 +1,6 @@
 {
-    "MaterialLayer":[164, 151.5],
-    "MaterialThickness":[25, 3],
-    "MaterialLabel":["Gold", "Chromium"],
-    "MaterialImagePath":["io/170x160-1cell.png", "io/170x160-1cell.png", "io/170x160-1cell.png"]
+    "MaterialLayer":[151.5, 164],
+    "MaterialThickness":[3, 25],
+    "MaterialLabel":["chromium", "gold"],
+    "MaterialImagePath":["io/170x160-1cell.png"]
 }

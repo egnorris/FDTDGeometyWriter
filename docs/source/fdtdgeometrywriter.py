@@ -181,6 +181,17 @@ def PreviewLayerPlacement(params):
     plt.show()
 
 def getEntry(G, MaterialLayer, StepSize):
+    """getEntry() convert a GeometryEntry object to a dictionary for geometry.json entry.
+
+    Args:
+        G: Geometry Entry Object
+        MaterialLayer: Y-axis position of Geometry Entry Object in the 3D-FDTD Simulation
+        StepSize: 3 Element vector of step sizes retrieved from pphinfoini.json
+
+    Returns:
+        a dictionary for geometry.json entry
+
+    """
     return {
             "shape": f"{G.Shape}",
             "radius": f"{G.Radius * StepSize[0]}",
@@ -191,6 +202,16 @@ def getEntry(G, MaterialLayer, StepSize):
             "position": f"[{G.Position[0]},{MaterialLayer},{G.Position[1]}]"}
 
 def getParams(pphinfoFilePath, paramsFilePath):
+    """getParams() open input files and convert them to a single params dictionary.
+
+    Args:
+        pphinfoFilePath: pphinfoini.json file path
+        paramsFilePath: params.json file path
+
+    Returns:
+        A single parameters dictionary
+
+    """
     f = open(paramsFilePath)
     params = json.load(f)
     f.close()
@@ -222,6 +243,16 @@ def getParams(pphinfoFilePath, paramsFilePath):
         "CenterPosition": CenterPosition}
 
 def writeGeometry(filepath,params):
+    """writeGeometry() Write Geometry Entry Objects to a geometry.json file
+
+    Args:
+        filepath: path where geometry.json will be saved
+        params: paramter dictionary constructed from pphinfoini.json and params.json
+
+    Returns:
+        A single parameters dictionary
+
+    """
     MaterialLayer = params["MaterialLayer"]
     MaterialThickness = params["MaterialThickness"]
     MaterialLabel = params["MaterialLabel"]
