@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="Python 3.8.10" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutorial &#8212; FDTDGeometryWriter 2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=2cd87a26"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="Usage.html" />
+    <link rel="prev" title="About" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="Usage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="About"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
+<section id="required-input-files">
+<h2>Required Input Files<a class="headerlink" href="#required-input-files" title="Link to this heading">¶</a></h2>
+<section id="testing-image">
+<h3>Testing Image<a class="headerlink" href="#testing-image" title="Link to this heading">¶</a></h3>
+<p>Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg.
+<img alt="image" src="_images/170x160-1cell.png" /></p>
+</section>
+<section id="pphinfoini-json">
+<h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
+      <span class="s2">&quot;Domain Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
+      <span class="s2">&quot;Domain Decomposition&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+      <span class="s2">&quot;Step Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">],</span>
+      <span class="s2">&quot;PML Box&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+      <span class="s2">&quot;TFSF Box&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+      <span class="s2">&quot;Scattering Box&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+      <span class="s2">&quot;Total Box&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+      <span class="s2">&quot;Number of Time Steps&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+      <span class="s2">&quot;Number of Wavelengths&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+      <span class="s2">&quot;Minimum Wavelength&quot;</span><span class="p">:</span> <span class="mf">500e-09</span><span class="p">,</span>
+      <span class="s2">&quot;Maximum Wavelength&quot;</span><span class="p">:</span> <span class="mf">1500e-09</span><span class="p">,</span>
+      <span class="s2">&quot;ANTENNA_TYPE&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="s2">&quot;Center Position&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">250</span><span class="p">]</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="params-json">
+<h3>params.json<a class="headerlink" href="#params-json" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
+      <span class="s2">&quot;MaterialLayer&quot;</span><span class="p">:[</span><span class="mi">164</span><span class="p">,</span> <span class="mf">151.5</span><span class="p">],</span>
+      <span class="s2">&quot;MaterialThickness&quot;</span><span class="p">:[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+      <span class="s2">&quot;MaterialLabel&quot;</span><span class="p">:[</span><span class="s2">&quot;Gold&quot;</span><span class="p">,</span> <span class="s2">&quot;Chromium&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;MaterialImagePath&quot;</span><span class="p">:[</span><span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">,</span> <span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">,</span> <span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">]</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="material-detection-algorithm">
+<h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Link to this heading">¶</a></h2>
+<p>The primary mechanism of this program lies in the getMaterialList() subroutine which analyzes the input image and
+converts from a raster image to a list of materials to be written to a geometry.json file. Rather than writing each
+image pixel to an entry in the geometry.json this code converts lines of pixels into a single geometry entry.</p>
+<section id="module-fdtdgeometrywriter.getMaterialList">
+<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.getMaterialList" title="Link to this heading">¶</a></h3>
+<p>Create a List of Current Material Geometry Information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param image<span class="colon">:</span></dt>
+<dd class="field-odd"><p>material layer image</p>
+</dd>
+<dt class="field-even">param Material<span class="colon">:</span></dt>
+<dd class="field-even"><p>material layer name</p>
+</dd>
+<dt class="field-odd">param Thickness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>thickness of curren material layer</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of Material Block Objects</p>
+</dd>
+</dl>
+</section>
+<section id="writer-state">
+<h3>Writer State<a class="headerlink" href="#writer-state" title="Link to this heading">¶</a></h3>
+<p>The analysis scans every pixel and retreives a 3-bit binary string that is used as the &quot;state&quot; of the writer this
+this string is built from the pixel at the previous index, the current pixel, and the pixel at the next index. There
+are four such states detailed in the below image.</p>
+<p><img alt="image" src="_images/geometry_writer_state_diagram.png" /></p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#required-input-files">Required Input Files</a><ul>
+<li><a class="reference internal" href="#testing-image">Testing Image</a></li>
+<li><a class="reference internal" href="#pphinfoini-json">pphinfoini.json</a></li>
+<li><a class="reference internal" href="#params-json">params.json</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#material-detection-algorithm">Material Detection Algorithm</a><ul>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getMaterialList">getMaterialList()</a></li>
+<li><a class="reference internal" href="#writer-state">Writer State</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">About</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Usage.html"
+                          title="next chapter">Usage</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Tutorial.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="Usage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="About"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Evan Norris.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    </div>
+  </body>
+</html>
