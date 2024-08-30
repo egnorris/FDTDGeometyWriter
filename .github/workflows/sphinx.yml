@@ -9,7 +9,6 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v3
-    - name: Build HTML
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
