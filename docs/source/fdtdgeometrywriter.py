@@ -193,18 +193,18 @@ def getEntry(G, MaterialLayer, StepSize):
         a dictionary for geometry.json entry
 
     """
-    StepSizeXMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
-    StepSizeYMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
-    StepSizeZMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
-    StepSizeXMultiple = int(StepSize[0] / StepSizeXMagnitude)
-    StepSizeYMultiple = int(StepSize[1] / StepSizeYMagnitude)
-    StepSizeZMultiple = int(StepSize[2] / StepSizeZMagnitude)
+    StepSizeXexponent = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeYexponent = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeZexponent = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeXcoef = int(StepSize[0] / StepSizeXexponent)
+    StepSizeYcoef = int(StepSize[1] / StepSizeYexponent)
+    StepSizeZcoef = int(StepSize[2] / StepSizeZexponent)
     return {
             "shape": f"{G.Shape}",
-            "radius": f"{G.Radius}{str(StepSizeXMagnitude)[1:]}",
-            "length": f"{G.Length * StepSizeXMultiple}{str(StepSizeXMagnitude)[1:]}",
-            "width": f"{G.Width * StepSizeZMultiple}{str(StepSizeZMagnitude)[1:]}",
-            "thickness": f"{int(G.Thickness * StepSizeYMultiple)}{str(StepSizeYMagnitude)[1:]}",
+            "radius": f"{G.Radius}{str(StepSizeXexponent)[1:]}",
+            "length": f"{G.Length * StepSizeXcoef}{str(StepSizeXexponent)[1:]}",
+            "width": f"{G.Width * StepSizeZcoef}{str(StepSizeZexponent)[1:]}",
+            "thickness": f"{int(G.Thickness * StepSizeYcoef)}{str(StepSizeYexponent)[1:]}",
             "material": f"{G.Material}",
             "position": [G.Position[0],MaterialLayer,G.Position[1]]}
 
