@@ -45,15 +45,22 @@
             
   <section id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">¶</a></h1>
-<section id="required-input-files">
-<h2>Required Input Files<a class="headerlink" href="#required-input-files" title="Permalink to this heading">¶</a></h2>
+<p>In this tutorial I'll describe both how to use this geometry writer library and provide a description of how it works. I also provide a test program in the /Test directory which includes the relevant input files in the /Test/io directory in this tutorial I'll describe the algorithm in both fairly general terms and in the context of the included Testing environment.</p>
+<section id="input-and-output-files">
+<h2>Input and Output Files<a class="headerlink" href="#input-and-output-files" title="Permalink to this heading">¶</a></h2>
+<p>Before we get started I'll briefly describe the required input files both in terms of what is included and the general format you
+will need to follow in order for this library to work.</p>
 <section id="testing-image">
 <h3>Testing Image<a class="headerlink" href="#testing-image" title="Permalink to this heading">¶</a></h3>
 <p>Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg.</p>
 <p><img alt="image" src="_images/170x160-1cell.png" /></p>
+<p>In general I recommend that when creating image files that you use a vector graphics program (I use Affinity Design which but
+Inkscape is free and works for our purposes) and then export the image as a .png which the python image libarary I'm using plays
+nicely with. The core algorithm of this library will convert an input image into a numpy array where each pixel is converted from an RGBA value to either a 0 if the RGB value is [255, 255, 255] and a 1 for all other colors. The alpha channel is presently not used for state conversion. So the image processor supports any non-white color as a valid input pixel I recommend using binary images for clarity.</p>
 </section>
 <section id="pphinfoini-json">
 <h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Permalink to this heading">¶</a></h3>
+<p>This library is meant to support University of Ottawa Compuational Nanophotonics Research Group's Internal 3D-FDTD software package so we take in the input file that is required to run those simulations but we are really only interested in the Domain Size (The Number of Cells in each direction), Step Size (Step Size in Each Direction), and Center Position (Where the center of the simulation domain is defined to be). We use the Domain Size for a layer visualization preview and to check that the input image size matches what the simulation is expecting and we use the Step Size when writing the output geometry.json file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;Domain Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
       <span class="s2">&quot;Domain Decomposition&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
@@ -71,24 +78,43 @@
    <span class="p">}</span>
 </pre></div>
 </div>
+<p>More information on the pphinfoini.json and it's entry values you can read the Controls section of the 3D-FDTD tutorial documentation.</p>
 </section>
 <section id="params-json">
 <h3>params.json<a class="headerlink" href="#params-json" title="Permalink to this heading">¶</a></h3>
+<p>We can't actually determine all of the relevant information about for the geomtry.json file from the pphinfoini.json and input image files alone so this params.json file provides some supplemental information. The input image and the step size provide enough information to fill out information on the XZ plane but we also need to know where each geometry layer is placed in the propagation direction (Y in this case) so that information is held here. This library supports writing multiple materials to the geometry.json file so the MaterialImagePath parameter is used to define the specific location of each input image, if fewer images are provided thant materials of interest then each subsequent material image is assumed to be the same as the last image provided. The MaterialLabel parameter defines the material entry in the geometry.json file and it must match a material label that the 3D-FDTD software recognizes or the FDTD simulation will not run properly. The MaterialLayer defines where along the propagation axis a material layer will be placed and the MaterialThickness defines how many layers along the propagation axis that material layer will span.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;MaterialLayer&quot;</span><span class="p">:[</span><span class="mi">164</span><span class="p">,</span> <span class="mf">151.5</span><span class="p">],</span>
       <span class="s2">&quot;MaterialThickness&quot;</span><span class="p">:[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-      <span class="s2">&quot;MaterialLabel&quot;</span><span class="p">:[</span><span class="s2">&quot;Gold&quot;</span><span class="p">,</span> <span class="s2">&quot;Chromium&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;MaterialLabel&quot;</span><span class="p">:[</span><span class="s2">&quot;gold&quot;</span><span class="p">,</span> <span class="s2">&quot;chromium&quot;</span><span class="p">],</span>
       <span class="s2">&quot;MaterialImagePath&quot;</span><span class="p">:[</span><span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">,</span> <span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">,</span> <span class="s2">&quot;io/TestShape.png&quot;</span><span class="p">]</span>
    <span class="p">}</span>
 </pre></div>
 </div>
 </section>
+<section id="geometry-json">
+<h3>geometry.json<a class="headerlink" href="#geometry-json" title="Permalink to this heading">¶</a></h3>
+<p>The goal of this library is to convert images corresponding to material layers into a geometry file that the 3D-FDTD code can recognize so I'll describe the relevant parts of the geometry.json files that are needed to understand what is being output by this libary.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+   <span class="p">{</span>
+      <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="s2">&quot;Rectangle&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;radius&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+		<span class="s2">&quot;length&quot;</span><span class="p">:</span><span class="mf">1e-9</span><span class="p">,</span>
+		<span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mf">1e-9</span><span class="p">,</span>
+		<span class="s2">&quot;thickness&quot;</span><span class="p">:</span><span class="mf">1e-9</span><span class="p">,</span>
+		<span class="s2">&quot;material&quot;</span><span class="p">:</span> <span class="s2">&quot;gold&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;position&quot;</span><span class="p">:[</span><span class="mi">500</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">500</span><span class="p">]</span>
+   <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>We will be converting 2D images into a set of rectangles in the XZ plane where each rectangle corresponds to a single geometry.json entry. In the context of the geometry.json the length of the rectangle is the span along the Z-axis, the width is the span along the X-axis, and the thickenss is the span along the y-axis (this information is defined in the params.json input file) because each rectangle corresponds to a run of pixels that radius is set to 0 which corresponds to a rectangle with no rounding on the corners. The length, width, and thickness are defined in terms of the physical dimensions of the geometry controlled primarily by the simulation step size while the position is defined in terms of voxel coordinates and that distincion is preserved in this libary</p>
+<p>At the end of running this library an output geometry.json file is generated with as many entries as there are continuous blocks of colored pixels along the x-axis in the input image where the height of the image should match the Z-coordinate of the domain and the width of the image should match the X-coordinate of the domain.</p>
+</section>
 </section>
 <section id="material-detection-algorithm">
 <h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Permalink to this heading">¶</a></h2>
-<p>The primary mechanism of this program lies in the getMaterialList() subroutine which analyzes the input image and
-converts from a raster image to a list of materials to be written to a geometry.json file. Rather than writing each
-image pixel to an entry in the geometry.json this code converts lines of pixels into a single geometry entry.</p>
+<p>The primary image processing of this libary is handled by the Image2GeometryEntryList() and rgba2state() functions and the process of storing information to later write to the geometry.json file the GeometryEntry() class is utilized</p>
 <section id="module-fdtdgeometrywriter.Image2GeometryEntryList">
 <span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Permalink to this heading">¶</a></h3>
 <p>Image2GeometryEntryList() function to convert image file to a list of GeometryEntry objects.</p>
@@ -117,13 +143,62 @@ image file</p>
 </dd>
 </dl>
 </section>
-<section id="writer-state">
-<h3>Writer State<a class="headerlink" href="#writer-state" title="Permalink to this heading">¶</a></h3>
-<p>The analysis scans every pixel and retreives a 3-bit binary string that is used as the &quot;state&quot; of the writer this
-this string is built from the pixel at the previous index, the current pixel, and the pixel at the next index. There
-are four such states detailed in the below image.</p>
-<p><img alt="image" src="_images/geometry_writer_state_diagram.png" /></p>
+<section id="module-fdtdgeometrywriter.rgba2state">
+<span id="rgba2state"></span><h3>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Permalink to this heading">¶</a></h3>
+<p>rgba2state() Convert rgba values to a state vector.</p>
+<p>if an rgb value for an input pixel is anything other than (255, 255, 255) then the state is 1
+otherwise the state is 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param pixels<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a list of three pixel arrays corresponding to the previous, current, and next pixel</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a 3-bit binary number represented as a vector denoting a state that Image2GeometryEntryList()
+recognizes.</p>
+</dd>
+</dl>
 </section>
+<section id="module-fdtdgeometrywriter.GeometryEntry">
+<span id="geometryentry"></span><h3>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Permalink to this heading">¶</a></h3>
+<p>GeometryEntry() Class that holds information needed to write to a geometry.json file.</p>
+<p>An entry to the geometry.json file requires the following information</p>
+<blockquote>
+<div><p>Position  -&gt; Position of Center Point</p>
+<p>Length    -&gt; Geometry Size in Z-axis</p>
+<p>Width     -&gt; Geometry Size in X-axis</p>
+<p>Thickness -&gt; Geometry Size in Y-axis</p>
+<p>Material  -&gt; Material of Geometry</p>
+<p>Shape     -&gt; Geometry Shape</p>
+<p>Radius    -&gt; Corner Radius of the Geometry Shape</p>
+</div></blockquote>
+<p>This class holds this information about each geometry entry to later be written into
+the geometry.json file</p>
+</section>
+<section id="state-vectors">
+<h3>State Vectors<a class="headerlink" href="#state-vectors" title="Permalink to this heading">¶</a></h3>
+<p>A brief description of the state vector is given in the getMaterialList() documentation above but some more information is warranted for this tutorial. The Statement of what each state vector is summarized in the below image.</p>
+<p><img alt="image" src="_images/geometry_writer_state_diagram.png" /></p>
+<p>The state vector is collected for each pixel in the input image (not including the left and right boundaries of the image). The state vector is a 3-bit binary number so there are eight possible states that a pixel can be in, but we are only interested in the four states provided above so I'll detail what each state means.</p>
+<section id="state-begin-material-block">
+<h4>011 State - Begin Material Block<a class="headerlink" href="#state-begin-material-block" title="Permalink to this heading">¶</a></h4>
+<p>It's most intuitive to refer to entries to the geometry.json as material blocks since at this point we are dealing entirely in terms of how many pixels in an image are colored, if the current pixel has a 011 state vector which means that the previous pixel was white while the current and next pixel are colored then Image2GeometryEntryList() interprets this to mean that a material block has begun and is going to have more than one pixel in it so the coordinate is recorded to be used later to define the mid-point coordinate and a width counter is initialized to 1.</p>
+</section>
+<section id="state-add-material-block">
+<h4>111 State - Add Material Block<a class="headerlink" href="#state-add-material-block" title="Permalink to this heading">¶</a></h4>
+<p>If the current pixel has a 111 state vector which means that the previous, current, and next pixel are all colored so Image2GeometryEntryList() interprets that to mean that the current material block is not ending so the width counter is incremented and then the loop moves to the next pixel.</p>
+</section>
+<section id="state-end-material-block">
+<h4>110 State - End Material Block<a class="headerlink" href="#state-end-material-block" title="Permalink to this heading">¶</a></h4>
+<p>If the current pixel has a 110 state vector which means that the previous and current pixels are both colored and the next pixel will be white so Image2GeometryEntryList() interprets that to mean that this pixel is the last one in the current material block so the width counter is incremented and the current coordinate is recorded. Now all of the information about the material block has been gathered and a GeometryEntry object can be generated and appended to a list of gathered geometry entries.</p>
+</section>
+<section id="state-single-block-material">
+<h4>010 State - Single Block Material<a class="headerlink" href="#state-single-block-material" title="Permalink to this heading">¶</a></h4>
+<p>There is a special case that we should consider as well, when the current pixel is colored and bounded by white pixels, state 010. This is interpreted by Image2GeometryEntryList() to be a single pixel width material and is immediatedly converted to a GeometryEntry object and appened to the geometry entries list.</p>
+</section>
+</section>
+</section>
+<section id="writing-geometyentry-objects-to-a-geometry-json-file">
+<h2>Writing GeometyEntry() Objects to A geometry.json File<a class="headerlink" href="#writing-geometyentry-objects-to-a-geometry-json-file" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -138,17 +213,27 @@ are four such states detailed in the below image.</p>
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Tutorial</a><ul>
-<li><a class="reference internal" href="#required-input-files">Required Input Files</a><ul>
+<li><a class="reference internal" href="#input-and-output-files">Input and Output Files</a><ul>
 <li><a class="reference internal" href="#testing-image">Testing Image</a></li>
 <li><a class="reference internal" href="#pphinfoini-json">pphinfoini.json</a></li>
 <li><a class="reference internal" href="#params-json">params.json</a></li>
+<li><a class="reference internal" href="#geometry-json">geometry.json</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#material-detection-algorithm">Material Detection Algorithm</a><ul>
 <li><a class="reference internal" href="#module-fdtdgeometrywriter.Image2GeometryEntryList">getMaterialList()</a></li>
-<li><a class="reference internal" href="#writer-state">Writer State</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.rgba2state">rgba2state()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.GeometryEntry">GeometryEntry()</a></li>
+<li><a class="reference internal" href="#state-vectors">State Vectors</a><ul>
+<li><a class="reference internal" href="#state-begin-material-block">011 State - Begin Material Block</a></li>
+<li><a class="reference internal" href="#state-add-material-block">111 State - Add Material Block</a></li>
+<li><a class="reference internal" href="#state-end-material-block">110 State - End Material Block</a></li>
+<li><a class="reference internal" href="#state-single-block-material">010 State - Single Block Material</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a class="reference internal" href="#writing-geometyentry-objects-to-a-geometry-json-file">Writing GeometyEntry() Objects to A geometry.json File</a></li>
 </ul>
 </li>
 </ul>
