@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 import matplotlib as mpl
 import json
+import math
 
 class GeometryEntry():
     """GeometryEntry() Class that holds information needed to write to a geometry.json file.
@@ -192,14 +193,20 @@ def getEntry(G, MaterialLayer, StepSize):
         a dictionary for geometry.json entry
 
     """
+    StepSizeXMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeYMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeZMagnitude = 10**(math.floor(math.log(StepSize[0], 10)))
+    StepSizeXMultiple = int(StepSize[0] / StepSizeXMagnitude)
+    StepSizeYMultiple = int(StepSize[1] / StepSizeYMagnitude)
+    StepSizeZMultiple = int(StepSize[2] / StepSizeZMagnitude)
     return {
             "shape": f"{G.Shape}",
-            "radius": f"{G.Radius * StepSize[0]}",
-            "length": f"{G.Length * StepSize[2]}",
-            "width": f"{G.Width * StepSize[0]}",
-            "thickness": f"{int(G.Thickness) * StepSize[1]}",
+            "radius": f"{G.Radius}{str(StepSizeXMagnitude)[1:]}",
+            "length": f"{G.Length * StepSizeXMultiple}{str(StepSizeXMagnitude)[1:]}",
+            "width": f"{G.Width * StepSizeZMultiple}{str(StepSizeZMagnitude)[1:]}",
+            "thickness": f"{int(G.Thickness * StepSizeYMultiple)}{str(StepSizeYMagnitude)[1:]}",
             "material": f"{G.Material}",
-            "position": f"[{G.Position[0]},{MaterialLayer},{G.Position[1]}]"}
+            "position": [G.Position[0],MaterialLayer,G.Position[1]]}
 
 def getParams(pphinfoFilePath, paramsFilePath):
     """getParams() open input files and convert them to a single params dictionary.
@@ -257,7 +264,7 @@ def writeGeometry(filepath,params):
     MaterialThickness = params["MaterialThickness"]
     MaterialLabel = params["MaterialLabel"]
     MaterialImages = params["MaterialImages"]
-    StepSize = params["DomainSize"]
+    StepSize = params["StepSize"]
     while True:
         try:
             f = open(filepath, "x")
