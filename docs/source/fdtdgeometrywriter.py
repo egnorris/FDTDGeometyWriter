@@ -201,7 +201,7 @@ def getEntry(G, MaterialLayer, StepSize):
     StepSizeZcoef = int(StepSize[2] / StepSizeZexponent)
     return {
             "shape": f"{G.Shape}",
-            "radius": f"{G.Radius}{str(StepSizeXexponent)[1:]}",
+            "radius": f"{0}",
             "length": f"{G.Length * StepSizeXcoef}{str(StepSizeXexponent)[1:]}",
             "width": f"{G.Width * StepSizeZcoef}{str(StepSizeZexponent)[1:]}",
             "thickness": f"{int(G.Thickness * StepSizeYcoef)}{str(StepSizeYexponent)[1:]}",
