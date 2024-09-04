@@ -102,14 +102,14 @@ def Image2GeometryEntryList(img, material, thickness):
                 #if the state is only 1 in the center digit there is only a
                 #single block of material so it can be written directly to
                 #the material list
-                temp = GeometryEntry(Boundaries = [(col, row), (col, row)],
+                temp = GeometryEntry(Boundaries = [(col+1, row+1), (col+1, row+1)],
                     Width = 1,Material = material,Thickness = thickness)
                 MaterialList.append(temp)
             elif state == [0,1,1]:
                 #if only the first digit of the state is a zero then this
                 #is the first block of material in a run so we can state this
                 #as the left boundary coordinate and initialize the width counter
-                B0 = (col, row)
+                B0 = (col+1, row+1)
                 width = 1
             elif state == [1,1,1]:
                 #if all digits of the state are one then we should have already started
@@ -120,7 +120,7 @@ def Image2GeometryEntryList(img, material, thickness):
                 #block of material which is the right boundary so we add the last pixel
                 #to the width counter and write the material information to the Material List
                 width += 1
-                B1 = (col, row)
+                B1 = (col+1, row+1)
                 temp = GeometryEntry(Boundaries = [B0, B1],
                     Width = width,Material = material,Thickness = thickness)
                 MaterialList.append(temp)

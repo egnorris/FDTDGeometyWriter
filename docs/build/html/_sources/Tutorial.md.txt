@@ -153,3 +153,6 @@ writer.PreviewLayerPlacement(params)
 ```
 
 In this example script parameter files are read in, a geometry file is written, and the proposed layer placement preview image is generated for inspection, some additional features can be built on top of this to setup an all in one 3D-FDTD job submission script but for the purposes of demonstration these four lines are all that should be required to utilize this library externally so long as the path to fdtdgeometrywriter.py is included python's path. 
+
+## N.B. Step Size Caution
+I've tested with both 1E-9 and 5E-9 step sizes and the results for 1E-9 looks to be correct the results for step sizes with coefficients other than 1 seem to be working make sure that you check the results against the expected image. 
