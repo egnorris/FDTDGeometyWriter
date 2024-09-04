@@ -109,3 +109,47 @@ If the current pixel has a 110 state vector which means that the previous and cu
 There is a special case that we should consider as well, when the current pixel is colored and bounded by white pixels, state 010. This is interpreted by Image2GeometryEntryList() to be a single pixel width material and is immediatedly converted to a GeometryEntry object and appened to the geometry entries list. 
 
 ## Writing GeometyEntry() Objects to A geometry.json File
+At the end of Image2GeometryEntryList() the user is returned a list of GeometryEntry() objects so all that remains is to convert those objects into a geometry.json file that the 3D-FDTD software can recognize. There are two relevant functions for this process 
+getEntry() and writeGeometry()
+
+### getEntry()
+```{eval-rst}
+.. automodule:: fdtdgeometrywriter.getEntry
+   :members:
+```
+
+The primary purpose of getEntry() is to convert GeometryEntry() object into a dictionary with the length, width, and thickness transformed from a pixel measurement into a distance in meters which is accomplished using the step size. It would likely work to just multiply the number of pixels by the step size in each direction but since the step size is generally quite small there is a risk of introducing a round off error to avoid this we convert the base and exponent of the step size into a string that appends to the end like a unit and multiply the coefficient by the pixel length. i.e. in the case a width of 5 pixels with a step size of 5E-9 instead of writing the result of '(5*5E-9)' directly to the file we extract the exponent, -9, and append a "E-9" string to the end of the entry and multiply the coefficient, 5, by the width to end up with '25"E-9"' at the end of the process we return a dictionary to write into the geometry.json file using the python json library in the next step.
+
+### writeGeometry()
+```{eval-rst}
+.. automodule:: fdtdgeometrywriter.writeGeometry
+   :members:
+```
+
+This function primarly just writes the output from getEntry() to a file but there is a little bit of housekeeping that occurs. First it needs to determine whether to make a new file for geometry.json or to clear an existing file, once the file handling is complete a the file is looped over all material layers writing each material entry for a layer to file stopping before writing the last entry which has some special handling. Each entry needs to be separated by a comma except for the final entry in the file and the entire list needs to be bounded by brackets, so at the last entry for a material a check verifies whether there is another material layer to enter or not and if there is then the last entry gets a comma appended which prevents the final entry of the file from having a comma appended. 
+
+
+## Layer Visualization
+In params.json layer placement and thickness values are provided for each material layer, but it's very easy to make a mistake when defining these values and quite frustrating to run a lengthy FDTD simulation just to find that these values are incorrectly defined so I've included a visualization function in this package as well so that before running the FDTD code the user can verify that materials have been placed where they are expected. 
+
+### PreviewLayerPlacement()
+```{eval-rst}
+.. automodule:: fdtdgeometrywriter.PreviewLayerPlacement
+   :members:
+```
+
+The provided testing code and files will yield the following layer preview image. 
+
+![image](../../Test/GeometryLayerPreview.png)
+
+## Example Library Usage
+Though an example script has been provided I'll also provide a general layout for using this code here just in case there's a problem accessing that version.
+
+```
+import fdtdgeometrywriter as writer
+params = writer.getParams("io/pphinfoini.json", "io/params.json")
+writer.writeGeometry("io/geometry.json",params)
+writer.PreviewLayerPlacement(params)
+```
+
+In this example script parameter files are read in, a geometry file is written, and the proposed layer placement preview image is generated for inspection, some additional features can be built on top of this to setup an all in one 3D-FDTD job submission script but for the purposes of demonstration these four lines are all that should be required to utilize this library externally so long as the path to fdtdgeometrywriter.py is included python's path. 
