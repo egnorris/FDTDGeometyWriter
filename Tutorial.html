@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 
-<html lang="Python 3.8.10">
+<html lang="Python 3.8.10" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Tutorial &#8212; FDTDGeometryWriter Ver 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=05890694"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/documentation_options.js?v=06a30dc4"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="Usage.html" />
+    <link rel="prev" title="FDTD Geometry Writer Ver 1.0 Documentation" href="index.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -25,6 +27,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="Usage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="FDTD Geometry Writer Ver 1.0 Documentation"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
@@ -36,14 +44,14 @@
           <div class="body" role="main">
             
   <section id="tutorial">
-<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">¶</a></h1>
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
 <p>In this tutorial I'll describe both how to use this geometry writer library and provide a description of how it works. I also provide a test program in the /Test directory which includes the relevant input files in the /Test/io directory in this tutorial I'll describe the algorithm in both fairly general terms and in the context of the included Testing environment.</p>
 <section id="input-and-output-files">
-<h2>Input and Output Files<a class="headerlink" href="#input-and-output-files" title="Permalink to this heading">¶</a></h2>
+<h2>Input and Output Files<a class="headerlink" href="#input-and-output-files" title="Link to this heading">¶</a></h2>
 <p>Before we get started I'll briefly describe the required input files both in terms of what is included and the general format you
 will need to follow in order for this library to work.</p>
 <section id="testing-image">
-<h3>Testing Image<a class="headerlink" href="#testing-image" title="Permalink to this heading">¶</a></h3>
+<h3>Testing Image<a class="headerlink" href="#testing-image" title="Link to this heading">¶</a></h3>
 <p>Below is the Input Image from the Included Testing Program of a material profile with a domain size of 500x500 pixels and a nanoantenna with two legs each with a width of 80 pixels and one 170 pixel leg and one 160 pixel leg.</p>
 <p><img alt="image" src="_images/170x160-1cell.png" /></p>
 <p>In general I recommend that when creating image files that you use a vector graphics program (I use Affinity Design which but
@@ -51,7 +59,7 @@ Inkscape is free and works for our purposes) and then export the image as a .png
 nicely with. The core algorithm of this library will convert an input image into a numpy array where each pixel is converted from an RGBA value to either a 0 if the RGB value is [255, 255, 255] and a 1 for all other colors. The alpha channel is presently not used for state conversion. So the image processor supports any non-white color as a valid input pixel I recommend using binary images for clarity.</p>
 </section>
 <section id="pphinfoini-json">
-<h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Permalink to this heading">¶</a></h3>
+<h3>pphinfoini.json<a class="headerlink" href="#pphinfoini-json" title="Link to this heading">¶</a></h3>
 <p>This library is meant to support University of Ottawa Compuational Nanophotonics Research Group's Internal 3D-FDTD software package so we take in the input file that is required to run those simulations but we are really only interested in the Domain Size (The Number of Cells in each direction), Step Size (Step Size in Each Direction), and Center Position (Where the center of the simulation domain is defined to be). We use the Domain Size for a layer visualization preview and to check that the input image size matches what the simulation is expecting and we use the Step Size when writing the output geometry.json file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;Domain Size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
@@ -73,7 +81,7 @@ nicely with. The core algorithm of this library will convert an input image into
 <p>More information on the pphinfoini.json and it's entry values you can read the Controls section of the 3D-FDTD tutorial documentation.</p>
 </section>
 <section id="params-json">
-<h3>params.json<a class="headerlink" href="#params-json" title="Permalink to this heading">¶</a></h3>
+<h3>params.json<a class="headerlink" href="#params-json" title="Link to this heading">¶</a></h3>
 <p>We can't actually determine all of the relevant information about for the geomtry.json file from the pphinfoini.json and input image files alone so this params.json file provides some supplemental information. The input image and the step size provide enough information to fill out information on the XZ plane but we also need to know where each geometry layer is placed in the propagation direction (Y in this case) so that information is held here. This library supports writing multiple materials to the geometry.json file so the MaterialImagePath parameter is used to define the specific location of each input image, if fewer images are provided thant materials of interest then each subsequent material image is assumed to be the same as the last image provided. The MaterialLabel parameter defines the material entry in the geometry.json file and it must match a material label that the 3D-FDTD software recognizes or the FDTD simulation will not run properly. The MaterialLayer defines where along the propagation axis a material layer will be placed and the MaterialThickness defines how many layers along the propagation axis that material layer will span.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">{</span>
       <span class="s2">&quot;MaterialLayer&quot;</span><span class="p">:[</span><span class="mi">164</span><span class="p">,</span> <span class="mf">151.5</span><span class="p">],</span>
@@ -85,7 +93,7 @@ nicely with. The core algorithm of this library will convert an input image into
 </div>
 </section>
 <section id="geometry-json">
-<h3>geometry.json<a class="headerlink" href="#geometry-json" title="Permalink to this heading">¶</a></h3>
+<h3>geometry.json<a class="headerlink" href="#geometry-json" title="Link to this heading">¶</a></h3>
 <p>The goal of this library is to convert images corresponding to material layers into a geometry file that the 3D-FDTD code can recognize so I'll describe the relevant parts of the geometry.json files that are needed to understand what is being output by this libary.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
    <span class="p">{</span>
@@ -105,10 +113,10 @@ nicely with. The core algorithm of this library will convert an input image into
 </section>
 </section>
 <section id="material-detection-algorithm">
-<h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Permalink to this heading">¶</a></h2>
+<h2>Material Detection Algorithm<a class="headerlink" href="#material-detection-algorithm" title="Link to this heading">¶</a></h2>
 <p>The primary image processing of this libary is handled by the Image2GeometryEntryList() and rgba2state() functions and the process of storing information to later write to the geometry.json file the GeometryEntry() class is utilized</p>
 <section id="module-fdtdgeometrywriter.Image2GeometryEntryList">
-<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Permalink to this heading">¶</a></h3>
+<span id="getmateriallist"></span><h3>getMaterialList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Link to this heading">¶</a></h3>
 <p>Image2GeometryEntryList() function to convert image file to a list of GeometryEntry objects.</p>
 <p>This is the main algorithm for this program, and how it works is detailed in the Tutorial
 page but in general the process that is followed is for every pixel of the input image a
@@ -136,7 +144,7 @@ image file</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.rgba2state">
-<span id="rgba2state"></span><h3>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Permalink to this heading">¶</a></h3>
+<span id="rgba2state"></span><h3>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Link to this heading">¶</a></h3>
 <p>rgba2state() Convert rgba values to a state vector.</p>
 <p>if an rgb value for an input pixel is anything other than (255, 255, 255) then the state is 1
 otherwise the state is 0.</p>
@@ -151,7 +159,7 @@ recognizes.</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.GeometryEntry">
-<span id="geometryentry"></span><h3>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Permalink to this heading">¶</a></h3>
+<span id="geometryentry"></span><h3>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Link to this heading">¶</a></h3>
 <p>GeometryEntry() Class that holds information needed to write to a geometry.json file.</p>
 <p>An entry to the geometry.json file requires the following information</p>
 <blockquote>
@@ -167,34 +175,34 @@ recognizes.</p>
 the geometry.json file</p>
 </section>
 <section id="state-vectors">
-<h3>State Vectors<a class="headerlink" href="#state-vectors" title="Permalink to this heading">¶</a></h3>
+<h3>State Vectors<a class="headerlink" href="#state-vectors" title="Link to this heading">¶</a></h3>
 <p>A brief description of the state vector is given in the getMaterialList() documentation above but some more information is warranted for this tutorial. The Statement of what each state vector is summarized in the below image.</p>
 <p><img alt="image" src="_images/geometry_writer_state_diagram.png" /></p>
 <p>The state vector is collected for each pixel in the input image (not including the left and right boundaries of the image). The state vector is a 3-bit binary number so there are eight possible states that a pixel can be in, but we are only interested in the four states provided above so I'll detail what each state means.</p>
 <section id="state-begin-material-block">
-<h4>011 State - Begin Material Block<a class="headerlink" href="#state-begin-material-block" title="Permalink to this heading">¶</a></h4>
+<h4>011 State - Begin Material Block<a class="headerlink" href="#state-begin-material-block" title="Link to this heading">¶</a></h4>
 <p>It's most intuitive to refer to entries to the geometry.json as material blocks since at this point we are dealing entirely in terms of how many pixels in an image are colored, if the current pixel has a 011 state vector which means that the previous pixel was white while the current and next pixel are colored then Image2GeometryEntryList() interprets this to mean that a material block has begun and is going to have more than one pixel in it so the coordinate is recorded to be used later to define the mid-point coordinate and a width counter is initialized to 1.</p>
 </section>
 <section id="state-add-material-block">
-<h4>111 State - Add Material Block<a class="headerlink" href="#state-add-material-block" title="Permalink to this heading">¶</a></h4>
+<h4>111 State - Add Material Block<a class="headerlink" href="#state-add-material-block" title="Link to this heading">¶</a></h4>
 <p>If the current pixel has a 111 state vector which means that the previous, current, and next pixel are all colored so Image2GeometryEntryList() interprets that to mean that the current material block is not ending so the width counter is incremented and then the loop moves to the next pixel.</p>
 </section>
 <section id="state-end-material-block">
-<h4>110 State - End Material Block<a class="headerlink" href="#state-end-material-block" title="Permalink to this heading">¶</a></h4>
+<h4>110 State - End Material Block<a class="headerlink" href="#state-end-material-block" title="Link to this heading">¶</a></h4>
 <p>If the current pixel has a 110 state vector which means that the previous and current pixels are both colored and the next pixel will be white so Image2GeometryEntryList() interprets that to mean that this pixel is the last one in the current material block so the width counter is incremented and the current coordinate is recorded. Now all of the information about the material block has been gathered and a GeometryEntry object can be generated and appended to a list of gathered geometry entries.</p>
 </section>
 <section id="state-single-block-material">
-<h4>010 State - Single Block Material<a class="headerlink" href="#state-single-block-material" title="Permalink to this heading">¶</a></h4>
+<h4>010 State - Single Block Material<a class="headerlink" href="#state-single-block-material" title="Link to this heading">¶</a></h4>
 <p>There is a special case that we should consider as well, when the current pixel is colored and bounded by white pixels, state 010. This is interpreted by Image2GeometryEntryList() to be a single pixel width material and is immediatedly converted to a GeometryEntry object and appened to the geometry entries list.</p>
 </section>
 </section>
 </section>
 <section id="writing-geometyentry-objects-to-a-geometry-json-file">
-<h2>Writing GeometyEntry() Objects to A geometry.json File<a class="headerlink" href="#writing-geometyentry-objects-to-a-geometry-json-file" title="Permalink to this heading">¶</a></h2>
+<h2>Writing GeometyEntry() Objects to A geometry.json File<a class="headerlink" href="#writing-geometyentry-objects-to-a-geometry-json-file" title="Link to this heading">¶</a></h2>
 <p>At the end of Image2GeometryEntryList() the user is returned a list of GeometryEntry() objects so all that remains is to convert those objects into a geometry.json file that the 3D-FDTD software can recognize. There are two relevant functions for this process
 getEntry() and writeGeometry()</p>
 <section id="module-fdtdgeometrywriter.getEntry">
-<span id="getentry"></span><h3>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Permalink to this heading">¶</a></h3>
+<span id="getentry"></span><h3>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Link to this heading">¶</a></h3>
 <p>getEntry() convert a GeometryEntry object to a dictionary for geometry.json entry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param G<span class="colon">:</span></dt>
@@ -213,7 +221,7 @@ getEntry() and writeGeometry()</p>
 <p>The primary purpose of getEntry() is to convert GeometryEntry() object into a dictionary with the length, width, and thickness transformed from a pixel measurement into a distance in meters which is accomplished using the step size. It would likely work to just multiply the number of pixels by the step size in each direction but since the step size is generally quite small there is a risk of introducing a round off error to avoid this we convert the base and exponent of the step size into a string that appends to the end like a unit and multiply the coefficient by the pixel length. i.e. in the case a width of 5 pixels with a step size of 5E-9 instead of writing the result of '(5*5E-9)' directly to the file we extract the exponent, -9, and append a &quot;E-9&quot; string to the end of the entry and multiply the coefficient, 5, by the width to end up with '25&quot;E-9&quot;' at the end of the process we return a dictionary to write into the geometry.json file using the python json library in the next step.</p>
 </section>
 <section id="module-fdtdgeometrywriter.writeGeometry">
-<span id="writegeometry"></span><h3>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Permalink to this heading">¶</a></h3>
+<span id="writegeometry"></span><h3>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Link to this heading">¶</a></h3>
 <p>writeGeometry() Write Geometry Entry Objects to a geometry.json file</p>
 <dl class="field-list simple">
 <dt class="field-odd">param filepath<span class="colon">:</span></dt>
@@ -230,10 +238,10 @@ getEntry() and writeGeometry()</p>
 </section>
 </section>
 <section id="layer-visualization">
-<h2>Layer Visualization<a class="headerlink" href="#layer-visualization" title="Permalink to this heading">¶</a></h2>
+<h2>Layer Visualization<a class="headerlink" href="#layer-visualization" title="Link to this heading">¶</a></h2>
 <p>In params.json layer placement and thickness values are provided for each material layer, but it's very easy to make a mistake when defining these values and quite frustrating to run a lengthy FDTD simulation just to find that these values are incorrectly defined so I've included a visualization function in this package as well so that before running the FDTD code the user can verify that materials have been placed where they are expected.</p>
 <section id="module-fdtdgeometrywriter.PreviewLayerPlacement">
-<span id="previewlayerplacement"></span><h3>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Permalink to this heading">¶</a></h3>
+<span id="previewlayerplacement"></span><h3>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Link to this heading">¶</a></h3>
 <p>PreviewLayerPlacement() Display visulization of Material Layer Placement in Y-X Plane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param LayerList<span class="colon">:</span></dt>
@@ -259,7 +267,7 @@ for each material to to be written to the geometry.json file</p>
 </section>
 </section>
 <section id="example-library-usage">
-<h2>Example Library Usage<a class="headerlink" href="#example-library-usage" title="Permalink to this heading">¶</a></h2>
+<h2>Example Library Usage<a class="headerlink" href="#example-library-usage" title="Link to this heading">¶</a></h2>
 <p>Though an example script has been provided I'll also provide a general layout for using this code here just in case there's a problem accessing that version.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fdtdgeometrywriter</span> <span class="k">as</span> <span class="nn">writer</span>
 <span class="n">params</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="n">getParams</span><span class="p">(</span><span class="s2">&quot;io/pphinfoini.json&quot;</span><span class="p">,</span> <span class="s2">&quot;io/params.json&quot;</span><span class="p">)</span>
@@ -270,8 +278,16 @@ for each material to to be written to the geometry.json file</p>
 <p>In this example script parameter files are read in, a geometry file is written, and the proposed layer placement preview image is generated for inspection, some additional features can be built on top of this to setup an all in one 3D-FDTD job submission script but for the purposes of demonstration these four lines are all that should be required to utilize this library externally so long as the path to fdtdgeometrywriter.py is included python's path.</p>
 </section>
 <section id="n-b-step-size-caution">
-<h2>N.B. Step Size Caution<a class="headerlink" href="#n-b-step-size-caution" title="Permalink to this heading">¶</a></h2>
+<h2>N.B. Step Size Caution<a class="headerlink" href="#n-b-step-size-caution" title="Link to this heading">¶</a></h2>
 <p>I've tested with both 1E-9 and 5E-9 step sizes and the results for 1E-9 looks to be correct the results for step sizes with coefficients other than 1 seem to be working make sure that you check the results against the expected image.</p>
+</section>
+<section id="d-fdtd-domain-validation">
+<h2>3D-FDTD Domain Validation<a class="headerlink" href="#d-fdtd-domain-validation" title="Link to this heading">¶</a></h2>
+<p>A 3D-FDTD simulation has been run with the provided testing image and pphinfo.json files as a validation. This validation is conducted by displaying the DOMAIN files generated while running a fdtd simulation. These plots can be generated with the following in the simulation directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">~/</span><span class="mi">3</span><span class="n">D</span><span class="o">-</span><span class="n">FDTD</span><span class="o">/</span><span class="n">postprocessing</span><span class="o">/</span><span class="n">WIP</span><span class="o">/</span><span class="n">visualizedDomain</span><span class="o">.</span><span class="n">py</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p><img alt="image" src="_images/geometry_writer_1nm_test.png" /></p>
 </section>
 </section>
 
@@ -280,7 +296,7 @@ for each material to to be written to the geometry.json file</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -317,10 +333,21 @@ for each material to to be written to the geometry.json file</p>
 </li>
 <li><a class="reference internal" href="#example-library-usage">Example Library Usage</a></li>
 <li><a class="reference internal" href="#n-b-step-size-caution">N.B. Step Size Caution</a></li>
+<li><a class="reference internal" href="#d-fdtd-domain-validation">3D-FDTD Domain Validation</a></li>
 </ul>
 </li>
 </ul>
 
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">FDTD Geometry Writer Ver 1.0 Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Usage.html"
+                          title="next chapter">Usage</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -329,7 +356,7 @@ for each material to to be written to the geometry.json file</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -337,13 +364,13 @@ for each material to to be written to the geometry.json file</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -352,13 +379,19 @@ for each material to to be written to the geometry.json file</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="Usage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="FDTD Geometry Writer Ver 1.0 Documentation"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2024, Evan Norris.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
     </div>
   </body>
 </html>
