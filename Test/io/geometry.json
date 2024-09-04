@@ -1,1 +1,5878 @@
-[{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "4000", "thickness": "900", "material": "chromium", "position": "[439,151.5,413]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "8000", "thickness": "900", "material": "chromium", "position": "[439,151.5,414]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "10000", "thickness": "900", "material": "chromium", "position": "[439,151.5,415]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "12000", "thickness": "900", "material": "chromium", "position": "[439,151.5,416]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "14000", "thickness": "900", "material": "chromium", "position": "[439,151.5,417]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "16000", "thickness": "900", "material": "chromium", "position": "[439,151.5,418]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "18000", "thickness": "900", "material": "chromium", "position": "[439,151.5,419]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "20000", "thickness": "900", "material": "chromium", "position": "[439,151.5,420]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "4000", "thickness": "900", "material": "chromium", "position": "[559,151.5,420]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "22000", "thickness": "900", "material": "chromium", "position": "[439,151.5,421]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "8000", "thickness": "900", "material": "chromium", "position": "[559,151.5,421]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "24000", "thickness": "900", "material": "chromium", "position": "[439,151.5,422]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "10000", "thickness": "900", "material": "chromium", "position": "[559,151.5,422]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "26000", "thickness": "900", "material": "chromium", "position": "[439,151.5,423]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "12000", "thickness": "900", "material": "chromium", "position": "[559,151.5,423]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "28000", "thickness": "900", "material": "chromium", "position": "[439,151.5,424]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "14000", "thickness": "900", "material": "chromium", "position": "[559,151.5,424]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "30000", "thickness": "900", "material": "chromium", "position": "[439,151.5,425]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "16000", "thickness": "900", "material": "chromium", "position": "[559,151.5,425]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "32000", "thickness": "900", "material": "chromium", "position": "[439,151.5,426]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "18000", "thickness": "900", "material": "chromium", "position": "[559,151.5,426]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "34000", "thickness": "900", "material": "chromium", "position": "[439,151.5,427]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "20000", "thickness": "900", "material": "chromium", "position": "[559,151.5,427]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "36000", "thickness": "900", "material": "chromium", "position": "[439,151.5,428]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "22000", "thickness": "900", "material": "chromium", "position": "[559,151.5,428]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "38000", "thickness": "900", "material": "chromium", "position": "[439,151.5,429]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "24000", "thickness": "900", "material": "chromium", "position": "[559,151.5,429]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "40000", "thickness": "900", "material": "chromium", "position": "[439,151.5,430]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "26000", "thickness": "900", "material": "chromium", "position": "[559,151.5,430]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "42000", "thickness": "900", "material": "chromium", "position": "[439,151.5,431]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "28000", "thickness": "900", "material": "chromium", "position": "[559,151.5,431]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "44000", "thickness": "900", "material": "chromium", "position": "[439,151.5,432]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "30000", "thickness": "900", "material": "chromium", "position": "[559,151.5,432]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "46000", "thickness": "900", "material": "chromium", "position": "[439,151.5,433]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "32000", "thickness": "900", "material": "chromium", "position": "[559,151.5,433]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "48000", "thickness": "900", "material": "chromium", "position": "[439,151.5,434]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "34000", "thickness": "900", "material": "chromium", "position": "[559,151.5,434]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "50000", "thickness": "900", "material": "chromium", "position": "[439,151.5,435]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "36000", "thickness": "900", "material": "chromium", "position": "[559,151.5,435]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "52000", "thickness": "900", "material": "chromium", "position": "[439,151.5,436]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "38000", "thickness": "900", "material": "chromium", "position": "[559,151.5,436]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "54000", "thickness": "900", "material": "chromium", "position": "[439,151.5,437]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "40000", "thickness": "900", "material": "chromium", "position": "[559,151.5,437]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "56000", "thickness": "900", "material": "chromium", "position": "[439,151.5,438]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "42000", "thickness": "900", "material": "chromium", "position": "[559,151.5,438]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "58000", "thickness": "900", "material": "chromium", "position": "[439,151.5,439]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "44000", "thickness": "900", "material": "chromium", "position": "[559,151.5,439]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "60000", "thickness": "900", "material": "chromium", "position": "[439,151.5,440]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "46000", "thickness": "900", "material": "chromium", "position": "[559,151.5,440]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "62000", "thickness": "900", "material": "chromium", "position": "[439,151.5,441]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "48000", "thickness": "900", "material": "chromium", "position": "[559,151.5,441]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "64000", "thickness": "900", "material": "chromium", "position": "[439,151.5,442]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "50000", "thickness": "900", "material": "chromium", "position": "[559,151.5,442]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "66000", "thickness": "900", "material": "chromium", "position": "[439,151.5,443]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "52000", "thickness": "900", "material": "chromium", "position": "[559,151.5,443]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "68000", "thickness": "900", "material": "chromium", "position": "[439,151.5,444]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "54000", "thickness": "900", "material": "chromium", "position": "[559,151.5,444]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "70000", "thickness": "900", "material": "chromium", "position": "[439,151.5,445]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "56000", "thickness": "900", "material": "chromium", "position": "[559,151.5,445]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "72000", "thickness": "900", "material": "chromium", "position": "[439,151.5,446]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "58000", "thickness": "900", "material": "chromium", "position": "[559,151.5,446]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "74000", "thickness": "900", "material": "chromium", "position": "[439,151.5,447]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "60000", "thickness": "900", "material": "chromium", "position": "[559,151.5,447]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "76000", "thickness": "900", "material": "chromium", "position": "[439,151.5,448]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "62000", "thickness": "900", "material": "chromium", "position": "[559,151.5,448]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "78000", "thickness": "900", "material": "chromium", "position": "[439,151.5,449]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "64000", "thickness": "900", "material": "chromium", "position": "[559,151.5,449]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "80000", "thickness": "900", "material": "chromium", "position": "[439,151.5,450]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "66000", "thickness": "900", "material": "chromium", "position": "[559,151.5,450]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "82000", "thickness": "900", "material": "chromium", "position": "[439,151.5,451]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "68000", "thickness": "900", "material": "chromium", "position": "[559,151.5,451]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "84000", "thickness": "900", "material": "chromium", "position": "[439,151.5,452]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "70000", "thickness": "900", "material": "chromium", "position": "[559,151.5,452]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "86000", "thickness": "900", "material": "chromium", "position": "[439,151.5,453]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "72000", "thickness": "900", "material": "chromium", "position": "[559,151.5,453]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "88000", "thickness": "900", "material": "chromium", "position": "[439,151.5,454]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "74000", "thickness": "900", "material": "chromium", "position": "[559,151.5,454]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "90000", "thickness": "900", "material": "chromium", "position": "[439,151.5,455]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "76000", "thickness": "900", "material": "chromium", "position": "[559,151.5,455]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "92000", "thickness": "900", "material": "chromium", "position": "[439,151.5,456]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "78000", "thickness": "900", "material": "chromium", "position": "[559,151.5,456]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "94000", "thickness": "900", "material": "chromium", "position": "[439,151.5,457]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "80000", "thickness": "900", "material": "chromium", "position": "[559,151.5,457]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "96000", "thickness": "900", "material": "chromium", "position": "[439,151.5,458]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "82000", "thickness": "900", "material": "chromium", "position": "[559,151.5,458]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "98000", "thickness": "900", "material": "chromium", "position": "[439,151.5,459]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "84000", "thickness": "900", "material": "chromium", "position": "[559,151.5,459]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "100000", "thickness": "900", "material": "chromium", "position": "[439,151.5,460]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "86000", "thickness": "900", "material": "chromium", "position": "[559,151.5,460]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "102000", "thickness": "900", "material": "chromium", "position": "[439,151.5,461]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "88000", "thickness": "900", "material": "chromium", "position": "[559,151.5,461]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "104000", "thickness": "900", "material": "chromium", "position": "[439,151.5,462]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "90000", "thickness": "900", "material": "chromium", "position": "[559,151.5,462]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "106000", "thickness": "900", "material": "chromium", "position": "[439,151.5,463]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "92000", "thickness": "900", "material": "chromium", "position": "[559,151.5,463]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "108000", "thickness": "900", "material": "chromium", "position": "[439,151.5,464]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "94000", "thickness": "900", "material": "chromium", "position": "[559,151.5,464]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "110000", "thickness": "900", "material": "chromium", "position": "[439,151.5,465]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "96000", "thickness": "900", "material": "chromium", "position": "[559,151.5,465]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "111000", "thickness": "900", "material": "chromium", "position": "[440,151.5,466]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "98000", "thickness": "900", "material": "chromium", "position": "[559,151.5,466]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "112000", "thickness": "900", "material": "chromium", "position": "[440,151.5,467]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "100000", "thickness": "900", "material": "chromium", "position": "[559,151.5,467]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "113000", "thickness": "900", "material": "chromium", "position": "[441,151.5,468]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "102000", "thickness": "900", "material": "chromium", "position": "[559,151.5,468]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "114000", "thickness": "900", "material": "chromium", "position": "[441,151.5,469]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "104000", "thickness": "900", "material": "chromium", "position": "[559,151.5,469]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "115000", "thickness": "900", "material": "chromium", "position": "[442,151.5,470]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "106000", "thickness": "900", "material": "chromium", "position": "[559,151.5,470]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "115000", "thickness": "900", "material": "chromium", "position": "[443,151.5,471]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "108000", "thickness": "900", "material": "chromium", "position": "[559,151.5,471]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "116000", "thickness": "900", "material": "chromium", "position": "[444,151.5,472]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "110000", "thickness": "900", "material": "chromium", "position": "[558,151.5,472]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "227000", "thickness": "900", "material": "chromium", "position": "[501,151.5,473]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "226000", "thickness": "900", "material": "chromium", "position": "[501,151.5,474]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "225000", "thickness": "900", "material": "chromium", "position": "[502,151.5,475]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "224000", "thickness": "900", "material": "chromium", "position": "[502,151.5,476]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "223000", "thickness": "900", "material": "chromium", "position": "[503,151.5,477]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "221000", "thickness": "900", "material": "chromium", "position": "[503,151.5,478]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "219000", "thickness": "900", "material": "chromium", "position": "[503,151.5,479]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "217000", "thickness": "900", "material": "chromium", "position": "[503,151.5,480]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "215000", "thickness": "900", "material": "chromium", "position": "[503,151.5,481]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "213000", "thickness": "900", "material": "chromium", "position": "[503,151.5,482]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "211000", "thickness": "900", "material": "chromium", "position": "[503,151.5,483]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "209000", "thickness": "900", "material": "chromium", "position": "[503,151.5,484]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "207000", "thickness": "900", "material": "chromium", "position": "[503,151.5,485]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "205000", "thickness": "900", "material": "chromium", "position": "[503,151.5,486]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "203000", "thickness": "900", "material": "chromium", "position": "[503,151.5,487]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "201000", "thickness": "900", "material": "chromium", "position": "[503,151.5,488]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "199000", "thickness": "900", "material": "chromium", "position": "[503,151.5,489]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "197000", "thickness": "900", "material": "chromium", "position": "[503,151.5,490]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "195000", "thickness": "900", "material": "chromium", "position": "[503,151.5,491]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "193000", "thickness": "900", "material": "chromium", "position": "[503,151.5,492]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "191000", "thickness": "900", "material": "chromium", "position": "[503,151.5,493]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "189000", "thickness": "900", "material": "chromium", "position": "[503,151.5,494]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "187000", "thickness": "900", "material": "chromium", "position": "[503,151.5,495]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "185000", "thickness": "900", "material": "chromium", "position": "[503,151.5,496]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "183000", "thickness": "900", "material": "chromium", "position": "[503,151.5,497]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "181000", "thickness": "900", "material": "chromium", "position": "[503,151.5,498]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "179000", "thickness": "900", "material": "chromium", "position": "[503,151.5,499]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "177000", "thickness": "900", "material": "chromium", "position": "[503,151.5,500]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "175000", "thickness": "900", "material": "chromium", "position": "[503,151.5,501]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "173000", "thickness": "900", "material": "chromium", "position": "[503,151.5,502]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "171000", "thickness": "900", "material": "chromium", "position": "[503,151.5,503]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "169000", "thickness": "900", "material": "chromium", "position": "[503,151.5,504]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "167000", "thickness": "900", "material": "chromium", "position": "[503,151.5,505]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "165000", "thickness": "900", "material": "chromium", "position": "[503,151.5,506]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "163000", "thickness": "900", "material": "chromium", "position": "[503,151.5,507]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "161000", "thickness": "900", "material": "chromium", "position": "[503,151.5,508]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "159000", "thickness": "900", "material": "chromium", "position": "[503,151.5,509]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "157000", "thickness": "900", "material": "chromium", "position": "[503,151.5,510]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "155000", "thickness": "900", "material": "chromium", "position": "[503,151.5,511]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "153000", "thickness": "900", "material": "chromium", "position": "[503,151.5,512]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "151000", "thickness": "900", "material": "chromium", "position": "[503,151.5,513]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "149000", "thickness": "900", "material": "chromium", "position": "[503,151.5,514]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "147000", "thickness": "900", "material": "chromium", "position": "[503,151.5,515]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "145000", "thickness": "900", "material": "chromium", "position": "[503,151.5,516]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "143000", "thickness": "900", "material": "chromium", "position": "[503,151.5,517]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "141000", "thickness": "900", "material": "chromium", "position": "[503,151.5,518]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "139000", "thickness": "900", "material": "chromium", "position": "[503,151.5,519]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "137000", "thickness": "900", "material": "chromium", "position": "[503,151.5,520]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "135000", "thickness": "900", "material": "chromium", "position": "[503,151.5,521]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "133000", "thickness": "900", "material": "chromium", "position": "[503,151.5,522]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "131000", "thickness": "900", "material": "chromium", "position": "[503,151.5,523]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "129000", "thickness": "900", "material": "chromium", "position": "[503,151.5,524]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "127000", "thickness": "900", "material": "chromium", "position": "[503,151.5,525]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "125000", "thickness": "900", "material": "chromium", "position": "[503,151.5,526]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "123000", "thickness": "900", "material": "chromium", "position": "[503,151.5,527]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "121000", "thickness": "900", "material": "chromium", "position": "[503,151.5,528]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "119000", "thickness": "900", "material": "chromium", "position": "[503,151.5,529]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "117000", "thickness": "900", "material": "chromium", "position": "[503,151.5,530]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "115000", "thickness": "900", "material": "chromium", "position": "[503,151.5,531]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "113000", "thickness": "900", "material": "chromium", "position": "[503,151.5,532]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "111000", "thickness": "900", "material": "chromium", "position": "[503,151.5,533]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "109000", "thickness": "900", "material": "chromium", "position": "[503,151.5,534]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "107000", "thickness": "900", "material": "chromium", "position": "[503,151.5,535]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "105000", "thickness": "900", "material": "chromium", "position": "[503,151.5,536]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "103000", "thickness": "900", "material": "chromium", "position": "[503,151.5,537]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "101000", "thickness": "900", "material": "chromium", "position": "[503,151.5,538]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "99000", "thickness": "900", "material": "chromium", "position": "[503,151.5,539]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "97000", "thickness": "900", "material": "chromium", "position": "[503,151.5,540]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "95000", "thickness": "900", "material": "chromium", "position": "[503,151.5,541]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "93000", "thickness": "900", "material": "chromium", "position": "[503,151.5,542]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "91000", "thickness": "900", "material": "chromium", "position": "[503,151.5,543]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "89000", "thickness": "900", "material": "chromium", "position": "[503,151.5,544]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "87000", "thickness": "900", "material": "chromium", "position": "[503,151.5,545]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "85000", "thickness": "900", "material": "chromium", "position": "[503,151.5,546]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "83000", "thickness": "900", "material": "chromium", "position": "[503,151.5,547]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "81000", "thickness": "900", "material": "chromium", "position": "[503,151.5,548]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "79000", "thickness": "900", "material": "chromium", "position": "[503,151.5,549]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "77000", "thickness": "900", "material": "chromium", "position": "[503,151.5,550]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "75000", "thickness": "900", "material": "chromium", "position": "[503,151.5,551]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "73000", "thickness": "900", "material": "chromium", "position": "[503,151.5,552]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "71000", "thickness": "900", "material": "chromium", "position": "[503,151.5,553]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "69000", "thickness": "900", "material": "chromium", "position": "[503,151.5,554]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "67000", "thickness": "900", "material": "chromium", "position": "[503,151.5,555]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "65000", "thickness": "900", "material": "chromium", "position": "[503,151.5,556]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "63000", "thickness": "900", "material": "chromium", "position": "[503,151.5,557]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "61000", "thickness": "900", "material": "chromium", "position": "[503,151.5,558]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "59000", "thickness": "900", "material": "chromium", "position": "[503,151.5,559]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "57000", "thickness": "900", "material": "chromium", "position": "[503,151.5,560]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "55000", "thickness": "900", "material": "chromium", "position": "[503,151.5,561]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "53000", "thickness": "900", "material": "chromium", "position": "[503,151.5,562]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "51000", "thickness": "900", "material": "chromium", "position": "[503,151.5,563]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "49000", "thickness": "900", "material": "chromium", "position": "[503,151.5,564]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "47000", "thickness": "900", "material": "chromium", "position": "[503,151.5,565]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "45000", "thickness": "900", "material": "chromium", "position": "[503,151.5,566]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "43000", "thickness": "900", "material": "chromium", "position": "[503,151.5,567]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "41000", "thickness": "900", "material": "chromium", "position": "[503,151.5,568]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "39000", "thickness": "900", "material": "chromium", "position": "[503,151.5,569]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "37000", "thickness": "900", "material": "chromium", "position": "[503,151.5,570]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "35000", "thickness": "900", "material": "chromium", "position": "[503,151.5,571]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "33000", "thickness": "900", "material": "chromium", "position": "[503,151.5,572]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "31000", "thickness": "900", "material": "chromium", "position": "[503,151.5,573]"},{"shape": "Rectangle", "radius": "1000", "length": "1000", "width": "29000", "thickness": "900", "material": "chromium", "position": 
+[
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "4e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            414
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "8e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            415
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "10e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            416
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "12e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            417
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "14e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            418
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "16e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            419
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "18e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            420
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "20e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            421
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "4e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            421
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "22e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            422
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "8e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            422
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "24e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            423
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "10e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            423
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "26e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            424
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "12e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            424
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "28e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            425
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "14e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            425
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "30e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            426
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "16e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            426
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "32e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            427
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "18e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            427
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "34e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            428
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "20e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            428
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "36e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            429
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "22e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            429
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "38e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            430
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "24e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            430
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "40e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            431
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "26e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            431
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "42e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            432
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "28e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            432
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "44e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            433
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "30e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            433
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "46e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            434
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "32e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            434
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "48e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            435
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "34e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            435
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "50e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            436
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "36e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            436
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "52e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            437
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "38e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            437
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "54e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            438
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "40e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            438
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "56e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            439
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "42e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            439
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "58e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            440
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "44e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            440
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "60e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            441
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "46e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            441
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "62e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            442
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "48e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            442
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "64e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            443
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "50e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            443
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "66e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            444
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "52e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            444
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "68e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            445
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "54e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            445
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "70e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            446
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "56e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            446
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "72e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            447
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "58e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            447
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "74e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            448
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "60e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            448
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "76e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            449
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "62e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            449
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "78e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            450
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "64e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            450
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "80e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            451
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "66e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            451
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "82e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            452
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "68e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            452
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "84e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            453
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "70e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            453
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "86e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            454
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "72e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            454
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "88e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            455
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "74e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            455
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "90e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            456
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "76e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            456
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "92e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            457
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "78e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            457
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "94e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            458
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "80e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            458
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "96e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            459
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "82e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            459
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "98e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            460
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "84e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            460
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "100e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            461
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "86e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            461
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "102e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            462
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "88e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            462
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "104e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            463
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "90e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            463
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "106e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            464
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "92e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            464
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "108e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            465
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "94e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            465
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "110e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            440,
+            151.5,
+            466
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "96e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            466
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "111e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            441,
+            151.5,
+            467
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "98e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            467
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "112e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            441,
+            151.5,
+            468
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "100e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            468
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "113e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            442,
+            151.5,
+            469
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "102e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            469
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "114e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            442,
+            151.5,
+            470
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "104e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            470
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            443,
+            151.5,
+            471
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "106e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            471
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            444,
+            151.5,
+            472
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "108e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            560,
+            151.5,
+            472
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "116e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            445,
+            151.5,
+            473
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "110e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            559,
+            151.5,
+            473
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "227e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            502,
+            151.5,
+            474
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "226e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            502,
+            151.5,
+            475
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "225e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            503,
+            151.5,
+            476
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "224e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            503,
+            151.5,
+            477
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "223e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            478
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "221e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            479
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "219e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            480
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "217e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            481
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "215e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            482
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "213e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            483
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "211e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            484
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "209e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            485
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "207e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            486
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "205e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            487
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "203e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            488
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "201e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            489
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "199e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            490
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "197e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            491
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "195e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            492
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "193e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            493
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "191e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            494
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "189e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            495
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "187e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            496
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "185e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            497
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "183e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            498
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "181e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            499
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "179e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            500
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "177e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            501
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "175e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            502
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "173e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            503
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "171e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            504
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "169e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            505
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "167e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            506
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "165e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            507
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "163e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            508
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "161e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            509
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "159e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            510
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "157e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            511
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "155e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            512
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "153e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            513
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "151e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            514
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "149e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            515
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "147e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            516
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "145e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            517
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "143e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            518
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "141e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            519
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "139e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            520
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "137e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            521
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "135e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            522
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "133e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            523
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "131e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            524
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "129e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            525
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "127e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            526
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "125e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            527
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "123e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            528
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "121e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            529
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "119e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            530
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "117e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            531
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            532
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "113e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            533
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "111e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            534
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "109e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            535
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "107e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            536
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "105e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            537
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "103e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            538
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "101e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            539
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "99e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            540
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "97e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            541
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "95e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            542
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "93e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            543
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "91e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            544
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "89e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            545
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "87e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            546
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "85e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            547
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "83e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            548
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "81e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            549
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "79e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            550
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "77e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            551
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "75e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            552
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "73e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            553
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "71e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            554
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "69e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            555
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "67e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            556
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "65e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            557
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "63e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            558
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "61e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            559
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "59e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            560
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "57e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            561
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "55e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            562
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "53e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            563
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "51e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            564
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "49e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            565
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "47e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            566
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "45e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            567
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "43e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            568
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "41e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            569
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "39e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            570
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "37e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            571
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "35e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            572
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "33e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            573
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "31e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            574
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "29e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            575
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "27e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            576
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "25e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            577
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "23e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            578
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "21e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            579
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "19e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            580
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "17e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            581
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "15e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            582
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "13e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            583
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "11e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            584
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "9e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            585
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "9e-09",
+        "thickness": "3e-09",
+        "material": "chromium",
+        "position": [
+            504,
+            151.5,
+            585
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "4e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            414
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "8e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            415
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "10e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            416
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "12e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            417
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "14e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            418
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "16e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            419
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "18e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            420
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "20e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            421
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "4e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            421
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "22e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            422
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "8e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            422
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "24e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            423
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "10e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            423
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "26e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            424
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "12e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            424
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "28e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            425
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "14e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            425
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "30e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            426
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "16e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            426
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "32e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            427
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "18e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            427
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "34e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            428
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "20e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            428
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "36e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            429
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "22e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            429
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "38e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            430
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "24e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            430
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "40e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            431
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "26e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            431
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "42e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            432
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "28e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            432
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "44e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            433
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "30e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            433
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "46e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            434
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "32e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            434
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "48e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            435
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "34e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            435
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "50e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            436
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "36e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            436
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "52e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            437
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "38e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            437
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "54e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            438
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "40e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            438
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "56e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            439
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "42e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            439
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "58e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            440
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "44e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            440
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "60e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            441
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "46e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            441
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "62e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            442
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "48e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            442
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "64e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            443
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "50e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            443
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "66e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            444
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "52e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            444
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "68e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            445
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "54e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            445
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "70e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            446
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "56e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            446
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "72e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            447
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "58e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            447
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "74e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            448
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "60e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            448
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "76e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            449
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "62e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            449
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "78e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            450
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "64e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            450
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "80e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            451
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "66e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            451
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "82e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            452
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "68e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            452
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "84e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            453
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "70e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            453
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "86e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            454
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "72e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            454
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "88e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            455
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "74e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            455
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "90e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            456
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "76e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            456
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "92e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            457
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "78e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            457
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "94e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            458
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "80e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            458
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "96e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            459
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "82e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            459
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "98e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            460
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "84e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            460
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "100e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            461
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "86e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            461
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "102e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            462
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "88e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            462
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "104e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            463
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "90e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            463
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "106e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            464
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "92e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            464
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "108e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            465
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "94e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            465
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "110e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            440,
+            164,
+            466
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "96e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            466
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "111e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            441,
+            164,
+            467
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "98e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            467
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "112e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            441,
+            164,
+            468
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "100e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            468
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "113e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            442,
+            164,
+            469
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "102e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            469
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "114e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            442,
+            164,
+            470
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "104e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            470
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            443,
+            164,
+            471
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "106e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            471
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            444,
+            164,
+            472
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "108e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            560,
+            164,
+            472
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "116e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            445,
+            164,
+            473
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "110e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            559,
+            164,
+            473
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "227e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            502,
+            164,
+            474
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "226e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            502,
+            164,
+            475
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "225e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            503,
+            164,
+            476
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "224e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            503,
+            164,
+            477
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "223e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            478
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "221e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            479
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "219e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            480
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "217e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            481
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "215e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            482
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "213e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            483
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "211e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            484
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "209e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            485
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "207e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            486
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "205e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            487
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "203e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            488
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "201e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            489
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "199e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            490
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "197e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            491
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "195e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            492
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "193e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            493
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "191e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            494
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "189e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            495
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "187e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            496
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "185e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            497
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "183e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            498
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "181e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            499
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "179e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            500
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "177e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            501
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "175e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            502
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "173e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            503
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "171e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            504
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "169e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            505
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "167e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            506
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "165e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            507
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "163e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            508
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "161e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            509
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "159e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            510
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "157e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            511
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "155e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            512
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "153e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            513
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "151e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            514
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "149e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            515
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "147e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            516
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "145e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            517
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "143e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            518
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "141e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            519
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "139e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            520
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "137e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            521
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "135e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            522
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "133e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            523
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "131e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            524
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "129e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            525
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "127e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            526
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "125e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            527
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "123e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            528
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "121e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            529
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "119e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            530
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "117e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            531
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "115e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            532
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "113e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            533
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "111e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            534
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "109e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            535
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "107e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            536
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "105e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            537
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "103e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            538
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "101e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            539
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "99e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            540
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "97e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            541
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "95e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            542
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "93e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            543
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "91e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            544
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "89e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            545
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "87e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            546
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "85e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            547
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "83e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            548
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "81e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            549
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "79e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            550
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "77e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            551
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "75e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            552
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "73e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            553
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "71e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            554
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "69e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            555
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "67e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            556
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "65e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            557
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "63e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            558
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "61e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            559
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "59e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            560
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "57e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            561
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "55e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            562
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "53e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            563
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "51e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            564
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "49e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            565
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "47e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            566
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "45e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            567
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "43e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            568
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "41e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            569
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "39e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            570
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "37e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            571
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "35e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            572
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "33e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            573
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "31e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            574
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "29e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            575
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "27e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            576
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "25e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            577
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "23e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            578
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "21e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            579
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "19e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            580
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "17e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            581
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "15e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            582
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "13e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            583
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "11e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            584
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "9e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            585
+        ]
+    },
+    {
+        "shape": "Rectangle",
+        "radius": "0",
+        "length": "1e-09",
+        "width": "9e-09",
+        "thickness": "25e-09",
+        "material": "gold",
+        "position": [
+            504,
+            164,
+            585
+        ]
+    }
+]

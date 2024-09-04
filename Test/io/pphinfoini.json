@@ -1,15 +1,19 @@
 {
 	"Domain Size": [1000, 300, 1000],
-	"Domain Decomposition": [4, 4, 4],
-	"Step Size": [1e-9, 1e-9, 1e-9],
+	"Domain Decomposition": [4, 8, 4],
 	"PML Box": [20, 20, 20],
 	"TFSF Box": [20, 20, 20],
 	"Scattering Box": [10, 10, 10],
-	"Total Box": [30, 30, 30],
+	"Space Step": [1e-09, 1e-09, 1e-09],
 	"Number of Time Steps": 10000,
-	"Number of Wavelengths": 50,
-	"Minimum Wavelength": 500e-09,
-	"Maximum Wavelength": 1500e-09,
-	"ANTENNA_TYPE": 1000,
-	"Center Position": [500, 150, 500]
+	"Number of Wavelengths": 48,
+	"Total Box": [30, 30, 30],
+	"Minimum Wavelength": 400e-09,
+	"Maximum Wavelength": 1600e-09,
+	"Antenna Type": 1000,
+	"Signal Type": "Gaussian",
+	"Pulse Width": 3e-15,
+	"Center Position": [500, 150, 500],
+	"Movie XY": 120,
+	"Movie XZ": 120
 }

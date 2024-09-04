@@ -156,3 +156,11 @@ In this example script parameter files are read in, a geometry file is written, 
 
 ## N.B. Step Size Caution
 I've tested with both 1E-9 and 5E-9 step sizes and the results for 1E-9 looks to be correct the results for step sizes with coefficients other than 1 seem to be working make sure that you check the results against the expected image. 
+
+## 3D-FDTD Domain Validation
+A 3D-FDTD simulation has been run with the provided testing image and pphinfo.json files as a validation. This validation is conducted by displaying the DOMAIN files generated while running a fdtd simulation. These plots can be generated with the following in the simulation directory
+```
+python3 ~/3D-FDTD/postprocessing/WIP/visualizedDomain.py .
+```
+
+![image](images/geometry_writer_1nm_test.png)

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 
-<html lang="Python 3.8.10">
+<html lang="Python 3.8.10" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Usage &#8212; FDTDGeometryWriter Ver 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=05890694"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/documentation_options.js?v=06a30dc4"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tutorial" href="Tutorial.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -25,6 +26,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="Tutorial.html" title="Tutorial"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Usage</a></li> 
       </ul>
@@ -36,9 +40,9 @@
           <div class="body" role="main">
             
   <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h1>
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h1>
 <section id="module-fdtdgeometrywriter.GeometryEntry">
-<span id="geometryentry"></span><h2>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Permalink to this heading">¶</a></h2>
+<span id="geometryentry"></span><h2>GeometryEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.GeometryEntry" title="Link to this heading">¶</a></h2>
 <p>GeometryEntry() Class that holds information needed to write to a geometry.json file.</p>
 <p>An entry to the geometry.json file requires the following information</p>
 <blockquote>
@@ -54,7 +58,7 @@
 the geometry.json file</p>
 </section>
 <section id="module-fdtdgeometrywriter.rgba2state">
-<span id="rgba2state"></span><h2>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Permalink to this heading">¶</a></h2>
+<span id="rgba2state"></span><h2>rgba2state()<a class="headerlink" href="#module-fdtdgeometrywriter.rgba2state" title="Link to this heading">¶</a></h2>
 <p>rgba2state() Convert rgba values to a state vector.</p>
 <p>if an rgb value for an input pixel is anything other than (255, 255, 255) then the state is 1
 otherwise the state is 0.</p>
@@ -69,7 +73,7 @@ recognizes.</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.Image2GeometryEntryList">
-<span id="image2geometryentrylist"></span><h2>Image2GeometryEntryList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Permalink to this heading">¶</a></h2>
+<span id="image2geometryentrylist"></span><h2>Image2GeometryEntryList()<a class="headerlink" href="#module-fdtdgeometrywriter.Image2GeometryEntryList" title="Link to this heading">¶</a></h2>
 <p>Image2GeometryEntryList() function to convert image file to a list of GeometryEntry objects.</p>
 <p>This is the main algorithm for this program, and how it works is detailed in the Tutorial
 page but in general the process that is followed is for every pixel of the input image a
@@ -97,7 +101,7 @@ image file</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.PreviewLayerPlacement">
-<span id="previewlayerplacement"></span><h2>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Permalink to this heading">¶</a></h2>
+<span id="previewlayerplacement"></span><h2>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Link to this heading">¶</a></h2>
 <p>PreviewLayerPlacement() Display visulization of Material Layer Placement in Y-X Plane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param LayerList<span class="colon">:</span></dt>
@@ -120,7 +124,7 @@ for each material to to be written to the geometry.json file</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.getEntry">
-<span id="getentry"></span><h2>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Permalink to this heading">¶</a></h2>
+<span id="getentry"></span><h2>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Link to this heading">¶</a></h2>
 <p>getEntry() convert a GeometryEntry object to a dictionary for geometry.json entry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param G<span class="colon">:</span></dt>
@@ -138,7 +142,7 @@ for each material to to be written to the geometry.json file</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.getParams">
-<span id="getparams"></span><h2>getParams()<a class="headerlink" href="#module-fdtdgeometrywriter.getParams" title="Permalink to this heading">¶</a></h2>
+<span id="getparams"></span><h2>getParams()<a class="headerlink" href="#module-fdtdgeometrywriter.getParams" title="Link to this heading">¶</a></h2>
 <p>getParams() open input files and convert them to a single params dictionary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">param pphinfoFilePath<span class="colon">:</span></dt>
@@ -153,7 +157,7 @@ for each material to to be written to the geometry.json file</p>
 </dl>
 </section>
 <section id="module-fdtdgeometrywriter.writeGeometry">
-<span id="writegeometry"></span><h2>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Permalink to this heading">¶</a></h2>
+<span id="writegeometry"></span><h2>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Link to this heading">¶</a></h2>
 <p>writeGeometry() Write Geometry Entry Objects to a geometry.json file</p>
 <dl class="field-list simple">
 <dt class="field-odd">param filepath<span class="colon">:</span></dt>
@@ -174,7 +178,7 @@ for each material to to be written to the geometry.json file</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -192,6 +196,11 @@ for each material to to be written to the geometry.json file</p>
 </ul>
 
   </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Tutorial.html"
+                          title="previous chapter">Tutorial</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -199,7 +208,7 @@ for each material to to be written to the geometry.json file</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -207,13 +216,13 @@ for each material to to be written to the geometry.json file</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -222,13 +231,16 @@ for each material to to be written to the geometry.json file</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="Tutorial.html" title="Tutorial"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Usage</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2024, Evan Norris.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
     </div>
   </body>
 </html>
