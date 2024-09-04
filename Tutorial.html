@@ -199,6 +199,83 @@ the geometry.json file</p>
 </section>
 <section id="writing-geometyentry-objects-to-a-geometry-json-file">
 <h2>Writing GeometyEntry() Objects to A geometry.json File<a class="headerlink" href="#writing-geometyentry-objects-to-a-geometry-json-file" title="Permalink to this heading">¶</a></h2>
+<p>At the end of Image2GeometryEntryList() the user is returned a list of GeometryEntry() objects so all that remains is to convert those objects into a geometry.json file that the 3D-FDTD software can recognize. There are two relevant functions for this process
+getEntry() and writeGeometry()</p>
+<section id="module-fdtdgeometrywriter.getEntry">
+<span id="getentry"></span><h3>getEntry()<a class="headerlink" href="#module-fdtdgeometrywriter.getEntry" title="Permalink to this heading">¶</a></h3>
+<p>getEntry() convert a GeometryEntry object to a dictionary for geometry.json entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param G<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Geometry Entry Object</p>
+</dd>
+<dt class="field-even">param MaterialLayer<span class="colon">:</span></dt>
+<dd class="field-even"><p>Y-axis position of Geometry Entry Object in the 3D-FDTD Simulation</p>
+</dd>
+<dt class="field-odd">param StepSize<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3 Element vector of step sizes retrieved from pphinfoini.json</p>
+</dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a dictionary for geometry.json entry</p>
+</dd>
+</dl>
+<p>The primary purpose of getEntry() is to convert GeometryEntry() object into a dictionary with the length, width, and thickness transformed from a pixel measurement into a distance in meters which is accomplished using the step size. It would likely work to just multiply the number of pixels by the step size in each direction but since the step size is generally quite small there is a risk of introducing a round off error to avoid this we convert the base and exponent of the step size into a string that appends to the end like a unit and multiply the coefficient by the pixel length. i.e. in the case a width of 5 pixels with a step size of 5E-9 instead of writing the result of '(5*5E-9)' directly to the file we extract the exponent, -9, and append a &quot;E-9&quot; string to the end of the entry and multiply the coefficient, 5, by the width to end up with '25&quot;E-9&quot;' at the end of the process we return a dictionary to write into the geometry.json file using the python json library in the next step.</p>
+</section>
+<section id="module-fdtdgeometrywriter.writeGeometry">
+<span id="writegeometry"></span><h3>writeGeometry()<a class="headerlink" href="#module-fdtdgeometrywriter.writeGeometry" title="Permalink to this heading">¶</a></h3>
+<p>writeGeometry() Write Geometry Entry Objects to a geometry.json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">param filepath<span class="colon">:</span></dt>
+<dd class="field-odd"><p>path where geometry.json will be saved</p>
+</dd>
+<dt class="field-even">param params<span class="colon">:</span></dt>
+<dd class="field-even"><p>paramter dictionary constructed from pphinfoini.json and params.json</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A single parameters dictionary</p>
+</dd>
+</dl>
+<p>This function primarly just writes the output from getEntry() to a file but there is a little bit of housekeeping that occurs. First it needs to determine whether to make a new file for geometry.json or to clear an existing file, once the file handling is complete a the file is looped over all material layers writing each material entry for a layer to file stopping before writing the last entry which has some special handling. Each entry needs to be separated by a comma except for the final entry in the file and the entire list needs to be bounded by brackets, so at the last entry for a material a check verifies whether there is another material layer to enter or not and if there is then the last entry gets a comma appended which prevents the final entry of the file from having a comma appended.</p>
+</section>
+</section>
+<section id="layer-visualization">
+<h2>Layer Visualization<a class="headerlink" href="#layer-visualization" title="Permalink to this heading">¶</a></h2>
+<p>In params.json layer placement and thickness values are provided for each material layer, but it's very easy to make a mistake when defining these values and quite frustrating to run a lengthy FDTD simulation just to find that these values are incorrectly defined so I've included a visualization function in this package as well so that before running the FDTD code the user can verify that materials have been placed where they are expected.</p>
+<section id="module-fdtdgeometrywriter.PreviewLayerPlacement">
+<span id="previewlayerplacement"></span><h3>PreviewLayerPlacement()<a class="headerlink" href="#module-fdtdgeometrywriter.PreviewLayerPlacement" title="Permalink to this heading">¶</a></h3>
+<p>PreviewLayerPlacement() Display visulization of Material Layer Placement in Y-X Plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param LayerList<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of layer placement for each to be written to the geometry.json file</p>
+</dd>
+<dt class="field-even">param ThicknessList<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of material size in the Y Axis for each material to to be written
+to the geometry.json file</p>
+</dd>
+<dt class="field-odd">param LabelList<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of materials corresponding to the index of refraction in the 3D-FDTD code
+for each material to to be written to the geometry.json file</p>
+</dd>
+<dt class="field-even">param Domain<span class="colon">:</span></dt>
+<dd class="field-even"><p>Size of the 3D FDTD simulation domain</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pyplot figure</p>
+</dd>
+</dl>
+<p>The provided testing code and files will yield the following layer preview image.</p>
+<p><img alt="image" src="_images/GeometryLayerPreview.png" /></p>
+</section>
+</section>
+<section id="example-library-usage">
+<h2>Example Library Usage<a class="headerlink" href="#example-library-usage" title="Permalink to this heading">¶</a></h2>
+<p>Though an example script has been provided I'll also provide a general layout for using this code here just in case there's a problem accessing that version.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fdtdgeometrywriter</span> <span class="k">as</span> <span class="nn">writer</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="n">getParams</span><span class="p">(</span><span class="s2">&quot;io/pphinfoini.json&quot;</span><span class="p">,</span> <span class="s2">&quot;io/params.json&quot;</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">writeGeometry</span><span class="p">(</span><span class="s2">&quot;io/geometry.json&quot;</span><span class="p">,</span><span class="n">params</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">PreviewLayerPlacement</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example script parameter files are read in, a geometry file is written, and the proposed layer placement preview image is generated for inspection, some additional features can be built on top of this to setup an all in one 3D-FDTD job submission script but for the purposes of demonstration these four lines are all that should be required to utilize this library externally so long as the path to fdtdgeometrywriter.py is included python's path.</p>
 </section>
 </section>
 
@@ -233,7 +310,16 @@ the geometry.json file</p>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#writing-geometyentry-objects-to-a-geometry-json-file">Writing GeometyEntry() Objects to A geometry.json File</a></li>
+<li><a class="reference internal" href="#writing-geometyentry-objects-to-a-geometry-json-file">Writing GeometyEntry() Objects to A geometry.json File</a><ul>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.getEntry">getEntry()</a></li>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.writeGeometry">writeGeometry()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-visualization">Layer Visualization</a><ul>
+<li><a class="reference internal" href="#module-fdtdgeometrywriter.PreviewLayerPlacement">PreviewLayerPlacement()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-library-usage">Example Library Usage</a></li>
 </ul>
 </li>
 </ul>
