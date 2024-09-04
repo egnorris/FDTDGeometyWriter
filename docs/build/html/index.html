@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About &#8212; FDTDGeometryWriter 2024 documentation</title>
+    <title>FDTD Geometry Writer Ver 1.0 Documentation &#8212; FDTDGeometryWriter Ver 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=a31aa02c"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=05890694"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     
@@ -29,8 +29,8 @@
         <li class="right" >
           <a href="Tutorial.html" title="Tutorial"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">About</a></li> 
+        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FDTD Geometry Writer Ver 1.0 Documentation</a></li> 
       </ul>
     </div>  
 
@@ -39,61 +39,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this heading">¶</a></h1>
-<p>Welcome to the Documentation for the 3D-FDTD geometry writer supporting program</p>
+  <section id="fdtd-geometry-writer-ver-1-0-documentation">
+<h1>FDTD Geometry Writer Ver 1.0 Documentation<a class="headerlink" href="#fdtd-geometry-writer-ver-1-0-documentation" title="Permalink to this heading">¶</a></h1>
+<p>FDTDGeometryWriter is a supporting pre-processing library for the <a class="reference external" href="https://github.com/FDTD-Lab">Open Source 3D Finite Difference Time Domain software</a> maintained in collaboration between The University of Ottawa Computational Nanophotonics Lab <a class="reference external" href="https://mysite.science.uottawa.ca/lramunno/">The University of Ottawa Computational Nanophotonics Lab</a> led by Dr. Lora Ramunno and  <a class="reference external" href="https://www.ita.uni-hannover.de/en/institute/team/prof-dr-antonio-cala">Dr. Antonino Calà Lesina's research group at Leibniz Universität Hannover</a>. The aim of this library is to provide a framework to map image files to the geometry.json system currently supported in this 3D-FDTD Software.</p>
+<p>A <a class="reference external" href="https://egnorris.github.io/FDTDGeometyWriter/Tutorial.html">Tutorial</a> on what is going on in this library and <a class="reference external" href="https://egnorris.github.io/FDTDGeometyWriter/Usage.html">Documentation</a> on individual functions are included.</p>
 <section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#contents">Contents</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Usage.html">Usage</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#input-and-output-files">Input and Output Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#testing-image">Testing Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#pphinfoini-json">pphinfoini.json</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#params-json">params.json</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#geometry-json">geometry.json</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#material-detection-algorithm">Material Detection Algorithm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.Image2GeometryEntryList">getMaterialList()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.rgba2state">rgba2state()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.GeometryEntry">GeometryEntry()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#state-vectors">State Vectors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#writing-geometyentry-objects-to-a-geometry-json-file">Writing GeometyEntry() Objects to A geometry.json File</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.getEntry">getEntry()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.writeGeometry">writeGeometry()</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#layer-visualization">Layer Visualization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial.html#module-fdtdgeometrywriter.PreviewLayerPlacement">PreviewLayerPlacement()</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#example-library-usage">Example Library Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#n-b-step-size-caution">N.B. Step Size Caution</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.GeometryEntry">GeometryEntry()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.rgba2state">rgba2state()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.Image2GeometryEntryList">Image2GeometryEntryList()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.PreviewLayerPlacement">PreviewLayerPlacement()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.getEntry">getEntry()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.getParams">getParams()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Usage.html#module-fdtdgeometrywriter.writeGeometry">writeGeometry()</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FDTD Geometry Writer Ver 1.0 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
 </ul>
 </div>
+<p>Maintained by <a class="reference external" href="https://egnorris.github.io/">Evan Norris</a></p>
 </section>
 </section>
 
@@ -107,7 +66,7 @@
   <div>
     <h3><a href="#">Table of Contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">About</a><ul>
+<li><a class="reference internal" href="#">FDTD Geometry Writer Ver 1.0 Documentation</a><ul>
 <li><a class="reference internal" href="#contents">Contents</a></li>
 </ul>
 </li>
@@ -152,8 +111,8 @@
         <li class="right" >
           <a href="Tutorial.html" title="Tutorial"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter 2024 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">About</a></li> 
+        <li class="nav-item nav-item-0"><a href="#">FDTDGeometryWriter Ver 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FDTD Geometry Writer Ver 1.0 Documentation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

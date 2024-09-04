@@ -9,7 +9,7 @@
 project = 'FDTDGeometryWriter'
 copyright = '2024, Evan Norris'
 author = 'Evan Norris'
-release = '2024'
+release = 'Ver 1.0'
 
 import os
 import sys
